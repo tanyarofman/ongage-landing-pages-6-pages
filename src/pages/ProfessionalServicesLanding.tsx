@@ -1,35 +1,27 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Progress } from "@/components/ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { 
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { CheckCircle, Users, Mail, TrendingUp, Shield, Zap, ArrowUp, Star, Clock, Target, Workflow } from "lucide-react";
+import { CheckCircle, Users, Mail, TrendingUp, Shield, Zap, ArrowRight, Star, Clock, Target, Workflow, ArrowUp } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const ProfessionalServicesLanding = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
-  const [automationProgress, setAutomationProgress] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       setShowBackToTop(window.scrollY > 400);
     };
 
-    const progressInterval = setInterval(() => {
-      setAutomationProgress(prev => prev >= 100 ? 0 : prev + 1);
-    }, 50);
-
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      clearInterval(progressInterval);
     };
   }, []);
 
@@ -38,33 +30,46 @@ const ProfessionalServicesLanding = () => {
   };
 
   return (
-    <TooltipProvider>
-      <div className="min-h-screen bg-gray-50 relative overflow-hidden" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
-        {/* Light Background Pattern */}
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `
-              radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
-              radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-              radial-gradient(circle at 40% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
-              linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.1) 50%, transparent 100%)
-            `,
-            backgroundSize: '100% 100%, 100% 100%, 100% 100%, 20px 20px'
-          }} />
+    <div className="min-h-screen bg-gray-900 text-white relative overflow-hidden" style={{ 
+      fontFamily: 'Inter, system-ui, sans-serif',
+      backgroundColor: '#0f0f23'
+    }}>
+      {/* Hexagonal Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-20 left-10 w-20 h-20 transform rotate-12">
+          <div className="w-full h-full bg-gradient-to-br from-purple-500 to-pink-500 clip-hex"></div>
         </div>
+        <div className="absolute top-40 right-20 w-16 h-16 transform -rotate-12">
+          <div className="w-full h-full bg-gradient-to-br from-blue-500 to-cyan-400 clip-hex"></div>
+        </div>
+        <div className="absolute bottom-40 left-20 w-24 h-24 transform rotate-45">
+          <div className="w-full h-full bg-gradient-to-br from-green-400 to-emerald-500 clip-hex"></div>
+        </div>
+        <div className="absolute bottom-20 right-10 w-18 h-18 transform -rotate-30">
+          <div className="w-full h-full bg-gradient-to-br from-orange-400 to-red-500 clip-hex"></div>
+        </div>
+      </div>
       {/* Navigation Bar */}
-      <nav className="bg-white/80 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
-        <div className="max-w-6xl mx-auto px-6 py-4">
+      <nav className="bg-black/50 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold" style={{ color: '#1e3a8a' }}>
-              Ongage
+            <div className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                <Mail className="w-4 h-4 text-white" />
+              </div>
+              <div className="text-xl font-bold text-white">
+                Ongage
+              </div>
             </div>
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#features" className="text-gray-600 hover:text-gray-900 transition-colors">Features</a>
-              <a href="#benefits" className="text-gray-600 hover:text-gray-900 transition-colors">Benefits</a>
-              <a href="#faq" className="text-gray-600 hover:text-gray-900 transition-colors">FAQ</a>
-              <Button size="sm" style={{ backgroundColor: '#8b5cf6', color: 'white' }}>
-                Start Free Trial
+              <a href="#features" className="text-gray-300 hover:text-white transition-colors">Features</a>
+              <a href="#benefits" className="text-gray-300 hover:text-white transition-colors">Benefits</a>
+              <a href="#faq" className="text-gray-300 hover:text-white transition-colors">FAQ</a>
+              <Button size="sm" className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white border-0">
+                Start trial
+              </Button>
+              <Button size="sm" variant="outline" className="border-gray-600 text-gray-300 hover:text-white hover:border-gray-400">
+                Get a demo
               </Button>
             </div>
           </div>
@@ -72,151 +77,180 @@ const ProfessionalServicesLanding = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="bg-white py-20 relative">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <div className="mb-8">
-            <Badge className="px-4 py-2 bg-blue-50 text-blue-700 border-blue-200 mb-6">
-              <Star className="w-4 h-4 mr-2" />
-              Professional Services
-            </Badge>
-            <h1 className="text-5xl md:text-6xl font-bold text-navy-900 mb-6 leading-tight" style={{ color: '#1e3a8a' }}>
-              Automate Your Professional Communications
+      <section className="py-32 relative">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <div className="mb-12">
+            <h1 className="text-6xl md:text-8xl font-black text-white mb-8 leading-tight">
+              THE ONE PLACE TO BUILD
+              <br />
+              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-600 bg-clip-text text-transparent">
+                PROFESSIONAL
+              </span>
+              <br />
+              <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-pink-600 bg-clip-text text-transparent">
+                COMMUNICATIONS
+              </span>
             </h1>
-            <p className="text-xl text-gray-600 mb-4 font-medium">
-              Focus on Clients, Not Email
+            <p className="text-xl text-gray-300 mb-6 max-w-3xl mx-auto leading-relaxed">
+              Launch, engage, and earn with automated email workflows designed for consultants, agencies, and professional service providers.
             </p>
           </div>
           
-          <p className="text-lg text-gray-700 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Win more business and build lasting relationships with automated email workflows.
-          </p>
+          {/* Rating */}
+          <div className="flex items-center justify-center gap-2 mb-12">
+            <div className="flex">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+              ))}
+            </div>
+            <div className="flex items-center gap-2 text-gray-300">
+              <div className="flex -space-x-2">
+                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-purple-400 to-pink-400"></div>
+                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-cyan-400"></div>
+                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-green-400 to-emerald-400"></div>
+              </div>
+              <span className="text-sm">5/5 from <strong className="text-white">2,847</strong> customers</span>
+            </div>
+          </div>
           
-          <p className="text-base text-gray-600 mb-12 max-w-5xl mx-auto leading-relaxed">
-            Whether you're advising clients, staying ahead of compliance requirements, or matching candidates to jobs, 
-            Ongage helps B2B professionals deliver the right message at the right time — without manual effort.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Button 
-                  size="lg" 
-                  className="px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all"
-                  style={{ backgroundColor: '#8b5cf6', color: 'white' }}
-                >
-                  Start Free Trial
-                </Button>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>No credit card required • 14-day free trial</p>
-              </TooltipContent>
-            </Tooltip>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button 
+              size="lg" 
+              className="px-10 py-4 text-lg font-semibold bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white border-0 rounded-lg shadow-xl hover:shadow-2xl transition-all"
+            >
+              Start your free trial →
+            </Button>
             <Button 
               size="lg" 
               variant="outline"
-              className="px-8 py-4 text-lg font-semibold rounded-lg border-2 hover:shadow-lg transition-all"
-              style={{ borderColor: '#1e3a8a', color: '#1e3a8a' }}
+              className="px-10 py-4 text-lg font-semibold border-2 border-gray-600 text-gray-300 hover:text-white hover:border-gray-400 rounded-lg"
             >
-              Book a Demo
+              View Plans
             </Button>
-          </div>
-
-          {/* Automation Progress Indicator */}
-          <div className="max-w-2xl mx-auto">
-            <div className="flex items-center justify-between mb-2 text-sm text-gray-600">
-              <span>Automation Setup</span>
-              <span>{automationProgress}% Complete</span>
-            </div>
-            <Progress value={automationProgress} className="h-2 bg-gray-200" />
-            <p className="text-xs text-gray-500 mt-2">
-              Watch your professional workflows come to life in real-time
-            </p>
           </div>
         </div>
       </section>
 
-      {/* Why Professional Services Need Smarter Email */}
-      <section className="py-20 bg-gray-50 relative" id="features">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <Badge className="mb-4" variant="secondary">
-              <Clock className="w-4 h-4 mr-2" />
-              Save 20+ Hours Weekly
-            </Badge>
-            <h2 className="text-4xl font-bold mb-6" style={{ color: '#1e3a8a' }}>
-              Why Professional Services Need Smarter Email
+      {/* Logo Marquee */}
+      <section className="py-16 border-b border-gray-800">
+        <div className="max-w-7xl mx-auto px-6">
+          <p className="text-center text-gray-400 text-sm font-medium mb-8 uppercase tracking-wider">
+            POWERING THE WORLD'S TOP PROFESSIONAL SERVICE PROVIDERS
+          </p>
+          <div className="flex items-center justify-center space-x-12 opacity-50">
+            <div className="text-2xl font-bold text-gray-500">KPMG</div>
+            <div className="text-2xl font-bold text-gray-500">McKinsey</div>
+            <div className="text-2xl font-bold text-gray-500">Deloitte</div>
+            <div className="text-2xl font-bold text-gray-500">BCG</div>
+            <div className="text-2xl font-bold text-gray-500">EY</div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-32" id="features">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-black text-white mb-8">
+              WHY PROFESSIONAL SERVICES
+              <br />
+              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                NEED SMARTER EMAIL
+              </span>
             </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Stop losing clients to manual follow-ups and missed deadlines
+            </p>
           </div>
           
-          {/* Tabs for different service types */}
-          <Tabs defaultValue="consultants" className="mb-12">
-            <TabsList className="grid w-full grid-cols-3 max-w-2xl mx-auto mb-8">
-              <TabsTrigger value="consultants">Consultants</TabsTrigger>
-              <TabsTrigger value="legal">Legal & Finance</TabsTrigger>
-              <TabsTrigger value="recruitment">Recruitment</TabsTrigger>
+          {/* Feature Tabs */}
+          <Tabs defaultValue="consultants" className="max-w-6xl mx-auto">
+            <TabsList className="grid w-full grid-cols-3 max-w-2xl mx-auto mb-16 bg-gray-800 p-2 rounded-xl">
+              <TabsTrigger 
+                value="consultants" 
+                className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-500 data-[state=active]:to-pink-500 data-[state=active]:text-white text-gray-300 rounded-lg py-3"
+              >
+                Consultants
+              </TabsTrigger>
+              <TabsTrigger 
+                value="legal" 
+                className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-500 data-[state=active]:to-pink-500 data-[state=active]:text-white text-gray-300 rounded-lg py-3"
+              >
+                Legal & Finance
+              </TabsTrigger>
+              <TabsTrigger 
+                value="recruitment" 
+                className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-500 data-[state=active]:to-pink-500 data-[state=active]:text-white text-gray-300 rounded-lg py-3"
+              >
+                Recruitment
+              </TabsTrigger>
             </TabsList>
             
             <TabsContent value="consultants" className="mt-8">
-              <div className="grid md:grid-cols-3 gap-8 mb-12">
-                <Card className="bg-white shadow-sm border-0 rounded-xl hover:shadow-lg transition-all group">
-                  <CardContent className="p-8">
-                    <div className="w-12 h-12 rounded-lg mb-6 flex items-center justify-center group-hover:scale-110 transition-transform" style={{ backgroundColor: '#fef3c7' }}>
-                      <Users className="h-6 w-6" style={{ color: '#f59e0b' }} />
+              <div className="grid md:grid-cols-1 gap-8 max-w-3xl mx-auto">
+                <Card className="bg-gray-800/50 border-gray-700 rounded-2xl hover:bg-gray-800/70 transition-all group backdrop-blur-sm">
+                  <CardContent className="p-10">
+                    <div className="flex items-center gap-6">
+                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-400/20 to-pink-400/20 flex items-center justify-center group-hover:scale-110 transition-transform border border-purple-400/30">
+                        <Users className="h-8 w-8 text-purple-400" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-3 mb-4">
+                          <h3 className="text-2xl font-bold text-white">
+                            Consultants & Coaches
+                          </h3>
+                          <Badge className="bg-purple-500/20 text-purple-300 border-purple-400/30">
+                            <Target className="w-3 h-3 mr-1" />
+                            High Touch
+                          </Badge>
+                        </div>
+                        <p className="text-gray-300 text-lg leading-relaxed">
+                          You nurture leads through multiple touchpoints — webinars, ebooks, follow‑up sessions. Creating tailored nurture sequences manually is time‑consuming and easy to miss.
+                        </p>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-2 mb-4">
-                      <h3 className="text-xl font-bold" style={{ color: '#1e3a8a' }}>
-                        Consultants & Coaches
-                      </h3>
-                      <Badge variant="outline" className="text-xs">
-                        <Target className="w-3 h-3 mr-1" />
-                        High Touch
-                      </Badge>
-                    </div>
-                    <p className="text-gray-600 leading-relaxed">
-                      You nurture leads through multiple touchpoints — webinars, ebooks, follow‑up sessions. Creating tailored nurture sequences manually is time‑consuming and easy to miss.
-                    </p>
                   </CardContent>
                 </Card>
               </div>
             </TabsContent>
             
             <TabsContent value="legal" className="mt-8">
-              <div className="grid md:grid-cols-2 gap-8 mb-12">
-                <Card className="bg-white shadow-sm border-0 rounded-xl hover:shadow-lg transition-all group">
+              <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <Card className="bg-gray-800/50 border-gray-700 rounded-2xl hover:bg-gray-800/70 transition-all group backdrop-blur-sm">
                   <CardContent className="p-8">
-                    <div className="w-12 h-12 rounded-lg mb-6 flex items-center justify-center group-hover:scale-110 transition-transform" style={{ backgroundColor: '#ddd6fe' }}>
-                      <Shield className="h-6 w-6" style={{ color: '#8b5cf6' }} />
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-400/20 to-cyan-400/20 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform border border-blue-400/30">
+                      <Shield className="h-8 w-8 text-blue-400" />
                     </div>
-                    <div className="flex items-center gap-2 mb-4">
-                      <h3 className="text-xl font-bold" style={{ color: '#1e3a8a' }}>
+                    <div className="flex items-center gap-3 mb-4">
+                      <h3 className="text-xl font-bold text-white">
                         Law Firms & Accountants
                       </h3>
-                      <Badge variant="outline" className="text-xs">
+                      <Badge className="bg-blue-500/20 text-blue-300 border-blue-400/30">
                         <Shield className="w-3 h-3 mr-1" />
                         Compliance
                       </Badge>
                     </div>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-gray-300 leading-relaxed">
                       Clients depend on you for timely updates about regulation changes and deadlines. Sending compliance reminders and educational content on schedule keeps you top‑of‑mind and builds trust.
                     </p>
                   </CardContent>
                 </Card>
                 
-                <Card className="bg-white shadow-sm border-0 rounded-xl hover:shadow-lg transition-all group">
+                <Card className="bg-gray-800/50 border-gray-700 rounded-2xl hover:bg-gray-800/70 transition-all group backdrop-blur-sm">
                   <CardContent className="p-8">
-                    <div className="w-12 h-12 rounded-lg mb-6 flex items-center justify-center group-hover:scale-110 transition-transform" style={{ backgroundColor: '#fee2e2' }}>
-                      <Mail className="h-6 w-6" style={{ color: '#ef4444' }} />
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-400/20 to-emerald-400/20 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform border border-green-400/30">
+                      <Mail className="h-8 w-8 text-green-400" />
                     </div>
-                    <div className="flex items-center gap-2 mb-4">
-                      <h3 className="text-xl font-bold" style={{ color: '#1e3a8a' }}>
+                    <div className="flex items-center gap-3 mb-4">
+                      <h3 className="text-xl font-bold text-white">
                         Tax & Financial Advisory
                       </h3>
-                      <Badge variant="outline" className="text-xs">
+                      <Badge className="bg-green-500/20 text-green-300 border-green-400/30">
                         <Clock className="w-3 h-3 mr-1" />
                         Seasonal
                       </Badge>
                     </div>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-gray-300 leading-relaxed">
                       Seasonal campaigns, deadline reminders, and client education require precise timing. Automated workflows ensure nothing falls through the cracks during busy periods.
                     </p>
                   </CardContent>
@@ -225,42 +259,42 @@ const ProfessionalServicesLanding = () => {
             </TabsContent>
             
             <TabsContent value="recruitment" className="mt-8">
-              <div className="grid md:grid-cols-2 gap-8 mb-12">
-                <Card className="bg-white shadow-sm border-0 rounded-xl hover:shadow-lg transition-all group">
+              <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <Card className="bg-gray-800/50 border-gray-700 rounded-2xl hover:bg-gray-800/70 transition-all group backdrop-blur-sm">
                   <CardContent className="p-8">
-                    <div className="w-12 h-12 rounded-lg mb-6 flex items-center justify-center group-hover:scale-110 transition-transform" style={{ backgroundColor: '#dcfce7' }}>
-                      <TrendingUp className="h-6 w-6" style={{ color: '#16a34a' }} />
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-400/20 to-red-400/20 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform border border-orange-400/30">
+                      <TrendingUp className="h-8 w-8 text-orange-400" />
                     </div>
-                    <div className="flex items-center gap-2 mb-4">
-                      <h3 className="text-xl font-bold" style={{ color: '#1e3a8a' }}>
+                    <div className="flex items-center gap-3 mb-4">
+                      <h3 className="text-xl font-bold text-white">
                         Recruitment Agencies
                       </h3>
-                      <Badge variant="outline" className="text-xs">
+                      <Badge className="bg-orange-500/20 text-orange-300 border-orange-400/30">
                         <Users className="w-3 h-3 mr-1" />
                         Multi-Party
                       </Badge>
                     </div>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-gray-300 leading-relaxed">
                       You must engage both candidates and employers. Automated job alerts, interview prep sequences and employer engagement campaigns increase placements and client satisfaction.
                     </p>
                   </CardContent>
                 </Card>
                 
-                <Card className="bg-white shadow-sm border-0 rounded-xl hover:shadow-lg transition-all group">
+                <Card className="bg-gray-800/50 border-gray-700 rounded-2xl hover:bg-gray-800/70 transition-all group backdrop-blur-sm">
                   <CardContent className="p-8">
-                    <div className="w-12 h-12 rounded-lg mb-6 flex items-center justify-center group-hover:scale-110 transition-transform" style={{ backgroundColor: '#f0f9ff' }}>
-                      <Workflow className="h-6 w-6" style={{ color: '#0ea5e9' }} />
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-400/20 to-blue-400/20 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform border border-cyan-400/30">
+                      <Workflow className="h-8 w-8 text-cyan-400" />
                     </div>
-                    <div className="flex items-center gap-2 mb-4">
-                      <h3 className="text-xl font-bold" style={{ color: '#1e3a8a' }}>
+                    <div className="flex items-center gap-3 mb-4">
+                      <h3 className="text-xl font-bold text-white">
                         Executive Search
                       </h3>
-                      <Badge variant="outline" className="text-xs">
+                      <Badge className="bg-cyan-500/20 text-cyan-300 border-cyan-400/30">
                         <Target className="w-3 h-3 mr-1" />
                         Premium
                       </Badge>
                     </div>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-gray-300 leading-relaxed">
                       High-stakes placements require nurturing both passive candidates and demanding clients. Sophisticated workflows maintain relationships throughout lengthy search processes.
                     </p>
                   </CardContent>
@@ -269,9 +303,9 @@ const ProfessionalServicesLanding = () => {
             </TabsContent>
           </Tabs>
           
-          <div className="text-center">
-            <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
-              Yet many professional services firms rely on generic email tools that lack automation, personalization, and reliable deliverability. <strong>Ongage changes that.</strong>
+          <div className="text-center mt-16">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              Yet many professional services firms rely on generic email tools that lack automation, personalization, and reliable deliverability. <span className="text-white font-semibold">Ongage changes that.</span>
             </p>
           </div>
         </div>
@@ -506,30 +540,32 @@ const ProfessionalServicesLanding = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-32 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-6" style={{ color: '#1e3a8a' }}>
-            Elevate Your Client Communications
+          <h2 className="text-4xl md:text-5xl font-black text-white mb-8">
+            ELEVATE YOUR CLIENT
+            <br />
+            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              COMMUNICATIONS
+            </span>
           </h2>
-          <p className="text-lg text-gray-600 mb-10 leading-relaxed">
+          <p className="text-xl text-gray-300 mb-12 leading-relaxed max-w-2xl mx-auto">
             Professional services succeed when communication is consistent and personal. Let Ongage handle the workflows so you can focus on your expertise.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button 
               size="lg" 
-              className="px-8 py-4 text-lg font-semibold rounded-lg"
-              style={{ backgroundColor: '#8b5cf6', color: 'white' }}
+              className="px-12 py-5 text-xl font-semibold bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white border-0 rounded-xl shadow-2xl hover:shadow-purple-500/25 transition-all"
             >
-              Start Free Trial Today
+              Start your free trial →
             </Button>
             <Button 
               size="lg" 
               variant="outline"
-              className="px-8 py-4 text-lg font-semibold rounded-lg border-2"
-              style={{ borderColor: '#1e3a8a', color: '#1e3a8a' }}
+              className="px-12 py-5 text-xl font-semibold border-2 border-gray-600 text-gray-300 hover:text-white hover:border-gray-400 rounded-xl"
             >
-              Book a Demo
+              Get a demo
             </Button>
           </div>
         </div>
@@ -539,15 +575,13 @@ const ProfessionalServicesLanding = () => {
       {showBackToTop && (
         <Button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full shadow-lg hover:shadow-xl transition-all"
-          style={{ backgroundColor: '#8b5cf6', color: 'white' }}
+          className="fixed bottom-8 right-8 z-50 w-14 h-14 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white border-0 shadow-2xl hover:shadow-purple-500/25 transition-all"
           size="icon"
         >
-          <ArrowUp className="h-5 w-5" />
+          <ArrowUp className="h-6 w-6" />
         </Button>
       )}
     </div>
-    </TooltipProvider>
   );
 };
 
