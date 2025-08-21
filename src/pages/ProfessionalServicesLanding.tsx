@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { 
   Accordion,
   AccordionContent,
@@ -163,145 +162,84 @@ const ProfessionalServicesLanding = () => {
             </p>
           </div>
           
-          {/* Feature Tabs */}
-          <Tabs defaultValue="consultants" className="max-w-6xl mx-auto">
-            <TabsList className="grid w-full grid-cols-3 max-w-2xl mx-auto mb-16 bg-gray-800 p-2 rounded-xl">
-              <TabsTrigger 
-                value="consultants" 
-                className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-500 data-[state=active]:to-pink-500 data-[state=active]:text-white text-gray-300 rounded-lg py-3"
-              >
-                Consultants
-              </TabsTrigger>
-              <TabsTrigger 
-                value="legal" 
-                className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-500 data-[state=active]:to-pink-500 data-[state=active]:text-white text-gray-300 rounded-lg py-3"
-              >
-                Legal & Finance
-              </TabsTrigger>
-              <TabsTrigger 
-                value="recruitment" 
-                className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-500 data-[state=active]:to-pink-500 data-[state=active]:text-white text-gray-300 rounded-lg py-3"
-              >
-                Recruitment
-              </TabsTrigger>
-            </TabsList>
+          {/* 4 Feature Cards */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            <Card className="bg-gray-800/50 border-gray-700 rounded-2xl hover:bg-gray-800/70 transition-all group backdrop-blur-sm">
+              <CardContent className="p-8">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-400/20 to-pink-400/20 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform border border-purple-400/30">
+                  <Users className="h-8 w-8 text-purple-400" />
+                </div>
+                <div className="flex items-center gap-3 mb-4">
+                  <h3 className="text-xl font-bold text-white">
+                    Consultants & Coaches
+                  </h3>
+                  <Badge className="bg-purple-500/20 text-purple-300 border-purple-400/30 text-xs">
+                    High Touch
+                  </Badge>
+                </div>
+                <p className="text-gray-300 leading-relaxed">
+                  Nurture leads through webinars, ebooks, and follow-up sessions with automated sequences.
+                </p>
+              </CardContent>
+            </Card>
             
-            <TabsContent value="consultants" className="mt-8">
-              <div className="grid md:grid-cols-1 gap-8 max-w-3xl mx-auto">
-                <Card className="bg-gray-800/50 border-gray-700 rounded-2xl hover:bg-gray-800/70 transition-all group backdrop-blur-sm">
-                  <CardContent className="p-10">
-                    <div className="flex items-center gap-6">
-                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-400/20 to-pink-400/20 flex items-center justify-center group-hover:scale-110 transition-transform border border-purple-400/30">
-                        <Users className="h-8 w-8 text-purple-400" />
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-3 mb-4">
-                          <h3 className="text-2xl font-bold text-white">
-                            Consultants & Coaches
-                          </h3>
-                          <Badge className="bg-purple-500/20 text-purple-300 border-purple-400/30">
-                            <Target className="w-3 h-3 mr-1" />
-                            High Touch
-                          </Badge>
-                        </div>
-                        <p className="text-gray-300 text-lg leading-relaxed">
-                          You nurture leads through multiple touchpoints — webinars, ebooks, follow‑up sessions. Creating tailored nurture sequences manually is time‑consuming and easy to miss.
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            </TabsContent>
+            <Card className="bg-gray-800/50 border-gray-700 rounded-2xl hover:bg-gray-800/70 transition-all group backdrop-blur-sm">
+              <CardContent className="p-8">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-400/20 to-cyan-400/20 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform border border-blue-400/30">
+                  <Shield className="h-8 w-8 text-blue-400" />
+                </div>
+                <div className="flex items-center gap-3 mb-4">
+                  <h3 className="text-xl font-bold text-white">
+                    Law Firms
+                  </h3>
+                  <Badge className="bg-blue-500/20 text-blue-300 border-blue-400/30 text-xs">
+                    Professional
+                  </Badge>
+                </div>
+                <p className="text-gray-300 leading-relaxed">
+                  Keep clients informed with timely updates and educational content that builds trust.
+                </p>
+              </CardContent>
+            </Card>
             
-            <TabsContent value="legal" className="mt-8">
-              <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <Card className="bg-gray-800/50 border-gray-700 rounded-2xl hover:bg-gray-800/70 transition-all group backdrop-blur-sm">
-                  <CardContent className="p-8">
-                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-400/20 to-cyan-400/20 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform border border-blue-400/30">
-                      <Shield className="h-8 w-8 text-blue-400" />
-                    </div>
-                    <div className="flex items-center gap-3 mb-4">
-                      <h3 className="text-xl font-bold text-white">
-                        Law Firms & Accountants
-                      </h3>
-                      <Badge className="bg-blue-500/20 text-blue-300 border-blue-400/30">
-                        <Shield className="w-3 h-3 mr-1" />
-                        Compliance
-                      </Badge>
-                    </div>
-                    <p className="text-gray-300 leading-relaxed">
-                      Clients depend on you for timely updates about regulation changes and deadlines. Sending compliance reminders and educational content on schedule keeps you top‑of‑mind and builds trust.
-                    </p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="bg-gray-800/50 border-gray-700 rounded-2xl hover:bg-gray-800/70 transition-all group backdrop-blur-sm">
-                  <CardContent className="p-8">
-                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-400/20 to-emerald-400/20 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform border border-green-400/30">
-                      <Mail className="h-8 w-8 text-green-400" />
-                    </div>
-                    <div className="flex items-center gap-3 mb-4">
-                      <h3 className="text-xl font-bold text-white">
-                        Tax & Financial Advisory
-                      </h3>
-                      <Badge className="bg-green-500/20 text-green-300 border-green-400/30">
-                        <Clock className="w-3 h-3 mr-1" />
-                        Seasonal
-                      </Badge>
-                    </div>
-                    <p className="text-gray-300 leading-relaxed">
-                      Seasonal campaigns, deadline reminders, and client education require precise timing. Automated workflows ensure nothing falls through the cracks during busy periods.
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-            </TabsContent>
+            <Card className="bg-gray-800/50 border-gray-700 rounded-2xl hover:bg-gray-800/70 transition-all group backdrop-blur-sm">
+              <CardContent className="p-8">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-400/20 to-emerald-400/20 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform border border-green-400/30">
+                  <Mail className="h-8 w-8 text-green-400" />
+                </div>
+                <div className="flex items-center gap-3 mb-4">
+                  <h3 className="text-xl font-bold text-white">
+                    Financial Advisory
+                  </h3>
+                  <Badge className="bg-green-500/20 text-green-300 border-green-400/30 text-xs">
+                    Seasonal
+                  </Badge>
+                </div>
+                <p className="text-gray-300 leading-relaxed">
+                  Automated seasonal campaigns and deadline reminders for busy periods.
+                </p>
+              </CardContent>
+            </Card>
             
-            <TabsContent value="recruitment" className="mt-8">
-              <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <Card className="bg-gray-800/50 border-gray-700 rounded-2xl hover:bg-gray-800/70 transition-all group backdrop-blur-sm">
-                  <CardContent className="p-8">
-                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-400/20 to-red-400/20 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform border border-orange-400/30">
-                      <TrendingUp className="h-8 w-8 text-orange-400" />
-                    </div>
-                    <div className="flex items-center gap-3 mb-4">
-                      <h3 className="text-xl font-bold text-white">
-                        Recruitment Agencies
-                      </h3>
-                      <Badge className="bg-orange-500/20 text-orange-300 border-orange-400/30">
-                        <Users className="w-3 h-3 mr-1" />
-                        Multi-Party
-                      </Badge>
-                    </div>
-                    <p className="text-gray-300 leading-relaxed">
-                      You must engage both candidates and employers. Automated job alerts, interview prep sequences and employer engagement campaigns increase placements and client satisfaction.
-                    </p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="bg-gray-800/50 border-gray-700 rounded-2xl hover:bg-gray-800/70 transition-all group backdrop-blur-sm">
-                  <CardContent className="p-8">
-                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-400/20 to-blue-400/20 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform border border-cyan-400/30">
-                      <Workflow className="h-8 w-8 text-cyan-400" />
-                    </div>
-                    <div className="flex items-center gap-3 mb-4">
-                      <h3 className="text-xl font-bold text-white">
-                        Executive Search
-                      </h3>
-                      <Badge className="bg-cyan-500/20 text-cyan-300 border-cyan-400/30">
-                        <Target className="w-3 h-3 mr-1" />
-                        Premium
-                      </Badge>
-                    </div>
-                    <p className="text-gray-300 leading-relaxed">
-                      High-stakes placements require nurturing both passive candidates and demanding clients. Sophisticated workflows maintain relationships throughout lengthy search processes.
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-            </TabsContent>
-          </Tabs>
+            <Card className="bg-gray-800/50 border-gray-700 rounded-2xl hover:bg-gray-800/70 transition-all group backdrop-blur-sm">
+              <CardContent className="p-8">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-400/20 to-red-400/20 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform border border-orange-400/30">
+                  <TrendingUp className="h-8 w-8 text-orange-400" />
+                </div>
+                <div className="flex items-center gap-3 mb-4">
+                  <h3 className="text-xl font-bold text-white">
+                    Recruitment
+                  </h3>
+                  <Badge className="bg-orange-500/20 text-orange-300 border-orange-400/30 text-xs">
+                    Multi-Party
+                  </Badge>
+                </div>
+                <p className="text-gray-300 leading-relaxed">
+                  Engage candidates and employers with automated job alerts and interview prep.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
           
           <div className="text-center mt-16">
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
@@ -311,85 +249,135 @@ const ProfessionalServicesLanding = () => {
         </div>
       </section>
 
-      {/* How Ongage Helps */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6" style={{ color: '#1e3a8a' }}>
-              How Ongage Helps
+      {/* How Ongage Helps - Beehiiv Style */}
+      <section className="py-32 bg-gradient-to-b from-gray-900 to-gray-800">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-black text-white leading-tight">
+              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                CLEAR. TIMELY. EFFECTIVE
+              </span>
+              <br />
+              PROFESSIONAL COMMUNICATION.
             </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto mt-8 leading-relaxed">
+              From client updates to stakeholder reports, Ongage makes it simple to send professional, 
+              engaging emails that keep everyone in the loop and drive results.
+            </p>
           </div>
           
+          {/* Stats Grid - Beehiiv Style */}
+          <div className="grid md:grid-cols-4 gap-6 mb-20">
+            <Card className="bg-white/5 border-gray-700 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all group">
+              <CardContent className="p-8 text-center">
+                <div className="text-4xl md:text-5xl font-black mb-4">
+                  <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                    95%+
+                  </span>
+                </div>
+                <p className="text-gray-300 text-lg leading-relaxed">
+                  email deliverability rate. Professional communications that actually reach inboxes.
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-white/5 border-gray-700 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all group">
+              <CardContent className="p-8 text-center">
+                <div className="text-4xl md:text-5xl font-black mb-4">
+                  <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                    20+
+                  </span>
+                </div>
+                <p className="text-gray-300 text-lg leading-relaxed">
+                  hours saved weekly through automated workflows and smart segmentation.
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-white/5 border-gray-700 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all group">
+              <CardContent className="p-8 text-center">
+                <div className="text-4xl md:text-5xl font-black mb-4">
+                  <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                    150+
+                  </span>
+                </div>
+                <p className="text-gray-300 text-lg leading-relaxed">
+                  custom fields for deep personalization and precise client targeting.
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-white/5 border-gray-700 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all group">
+              <CardContent className="p-8 text-center">
+                <div className="text-4xl md:text-5xl font-black mb-4">
+                  <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                    24/7
+                  </span>
+                </div>
+                <p className="text-gray-300 text-lg leading-relaxed">
+                  automated nurturing ensures no lead or client ever falls through the cracks.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+          
+          {/* Feature Highlights */}
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
-              <div className="flex gap-4">
-                <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1" style={{ backgroundColor: '#fef3c7' }}>
-                  <Zap className="h-4 w-4" style={{ color: '#f59e0b' }} />
+              <div className="flex gap-6">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center flex-shrink-0 border border-purple-400/30">
+                  <Zap className="h-6 w-6 text-purple-400" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2" style={{ color: '#1e3a8a' }}>
+                  <h3 className="text-2xl font-bold text-white mb-3">
                     Visual workflow automation
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Create drip campaigns and nurture sequences using our drag‑and‑drop builder. Trigger messages based on sign‑ups, downloads, or other events, and update list fields when recipients act.
+                  <p className="text-gray-300 text-lg leading-relaxed">
+                    Create drip campaigns and nurture sequences using our drag‑and‑drop builder. Trigger messages based on sign‑ups, downloads, or other events.
                   </p>
                 </div>
               </div>
               
-              <div className="flex gap-4">
-                <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1" style={{ backgroundColor: '#ddd6fe' }}>
-                  <Users className="h-4 w-4" style={{ color: '#8b5cf6' }} />
+              <div className="flex gap-6">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 flex items-center justify-center flex-shrink-0 border border-blue-400/30">
+                  <Users className="h-6 w-6 text-blue-400" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2" style={{ color: '#1e3a8a' }}>
+                  <h3 className="text-2xl font-bold text-white mb-3">
                     Deep segmentation & personalization
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Segment contacts by behavior, demographics or psychographics; slice and dice data with up to 150 custom fields, then deliver hyper‑personalized messages that resonate.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="flex gap-4">
-                <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1" style={{ backgroundColor: '#dcfce7' }}>
-                  <Mail className="h-4 w-4" style={{ color: '#16a34a' }} />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2" style={{ color: '#1e3a8a' }}>
-                    Reliable deliverability
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Route emails through over 15 SMTP relays and MTAs, choosing the best provider for each campaign to maintain inbox placement.
+                  <p className="text-gray-300 text-lg leading-relaxed">
+                    Segment contacts by behavior, demographics or psychographics with up to 150 custom fields for hyper‑personalized messaging.
                   </p>
                 </div>
               </div>
             </div>
             
             <div className="space-y-8">
-              <div className="flex gap-4">
-                <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1" style={{ backgroundColor: '#fee2e2' }}>
-                  <Shield className="h-4 w-4" style={{ color: '#ef4444' }} />
+              <div className="flex gap-6">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500/20 to-emerald-500/20 flex items-center justify-center flex-shrink-0 border border-green-400/30">
+                  <Mail className="h-6 w-6 text-green-400" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2" style={{ color: '#1e3a8a' }}>
-                    Integrated data management
+                  <h3 className="text-2xl font-bold text-white mb-3">
+                    Superior deliverability
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Built‑in email validation reduces bounces and complaints; a flexible API connects to your CRM or applicant tracking system for seamless data sync.
+                  <p className="text-gray-300 text-lg leading-relaxed">
+                    Advanced email validation and smart sending ensure your professional communications reach the right inboxes at the right time.
                   </p>
                 </div>
               </div>
               
-              <div className="flex gap-4">
-                <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1" style={{ backgroundColor: '#f0f9ff' }}>
-                  <TrendingUp className="h-4 w-4" style={{ color: '#0ea5e9' }} />
+              <div className="flex gap-6">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500/20 to-red-500/20 flex items-center justify-center flex-shrink-0 border border-orange-400/30">
+                  <Workflow className="h-6 w-6 text-orange-400" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2" style={{ color: '#1e3a8a' }}>
-                    Cost‑effective scalability
+                  <h3 className="text-2xl font-bold text-white mb-3">
+                    Seamless integrations
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Our token‑based pricing ensures you pay only for what you use, making enterprise‑grade automation accessible to small teams.
+                  <p className="text-gray-300 text-lg leading-relaxed">
+                    Connect to your CRM, practice management software, or any system via our flexible API for seamless data sync.
                   </p>
                 </div>
               </div>
@@ -398,91 +386,90 @@ const ProfessionalServicesLanding = () => {
         </div>
       </section>
 
-      {/* Benefits Table */}
-      <section className="py-20 bg-gray-50" id="benefits">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <Badge className="mb-4" variant="secondary">
-              <TrendingUp className="w-4 h-4 mr-2" />
-              Proven Results
-            </Badge>
-            <h2 className="text-4xl font-bold mb-6" style={{ color: '#1e3a8a' }}>
-              Benefits at a Glance
+      {/* Benefits Section */}
+      <section className="py-32" id="benefits">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-black text-white mb-8">
+              BENEFITS 
+              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                AT A GLANCE
+              </span>
             </h2>
           </div>
           
-          <div className="bg-white rounded-xl shadow-sm overflow-hidden">
-            <div className="grid md:grid-cols-2 gap-0">
-              <div className="p-8 border-b md:border-b-0 md:border-r border-gray-200">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <Card className="bg-gray-800/50 border-gray-700 rounded-2xl hover:bg-gray-800/70 transition-all group backdrop-blur-sm">
+              <CardContent className="p-8">
                 <div className="flex items-start gap-4">
-                  <CheckCircle className="h-6 w-6 flex-shrink-0 mt-1" style={{ color: '#16a34a' }} />
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center flex-shrink-0 border border-purple-400/30">
+                    <CheckCircle className="h-6 w-6 text-purple-400" />
+                  </div>
                   <div>
-                    <h3 className="text-lg font-bold mb-2" style={{ color: '#1e3a8a' }}>
+                    <h3 className="text-lg font-bold text-white mb-3">
                       Lead & client nurturing on autopilot
                     </h3>
-                    <p className="text-gray-600">
-                      Build sequences that guide prospects through your funnel and keep clients informed.
+                    <p className="text-gray-300 leading-relaxed">
+                      Build sequences that guide prospects through your funnel and keep clients engaged.
                     </p>
                   </div>
                 </div>
-              </div>
-              
-              <div className="p-8 border-b md:border-b-0 border-gray-200">
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-gray-800/50 border-gray-700 rounded-2xl hover:bg-gray-800/70 transition-all group backdrop-blur-sm">
+              <CardContent className="p-8">
                 <div className="flex items-start gap-4">
-                  <CheckCircle className="h-6 w-6 flex-shrink-0 mt-1" style={{ color: '#16a34a' }} />
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500/20 to-emerald-500/20 flex items-center justify-center flex-shrink-0 border border-green-400/30">
+                    <CheckCircle className="h-6 w-6 text-green-400" />
+                  </div>
                   <div>
-                    <h3 className="text-lg font-bold mb-2" style={{ color: '#1e3a8a' }}>
-                      Compliance made easy
+                    <h3 className="text-lg font-bold text-white mb-3">
+                      Higher engagement rates
                     </h3>
-                    <p className="text-gray-600">
-                      Schedule deadline reminders and regulatory updates with confidence; segmentation ensures messages go to the right clients.
+                    <p className="text-gray-300 leading-relaxed">
+                      Deliver timely, relevant communications that improve response rates and client satisfaction.
                     </p>
                   </div>
                 </div>
-              </div>
-              
-              <div className="p-8 border-b md:border-b-0 md:border-r border-gray-200">
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-gray-800/50 border-gray-700 rounded-2xl hover:bg-gray-800/70 transition-all group backdrop-blur-sm">
+              <CardContent className="p-8">
                 <div className="flex items-start gap-4">
-                  <CheckCircle className="h-6 w-6 flex-shrink-0 mt-1" style={{ color: '#16a34a' }} />
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 flex items-center justify-center flex-shrink-0 border border-blue-400/30">
+                    <CheckCircle className="h-6 w-6 text-blue-400" />
+                  </div>
                   <div>
-                    <h3 className="text-lg font-bold mb-2" style={{ color: '#1e3a8a' }}>
-                      Higher placement rates
+                    <h3 className="text-lg font-bold text-white mb-3">
+                      Superior deliverability
                     </h3>
-                    <p className="text-gray-600">
-                      Deliver timely job alerts and candidate nurturing emails to improve response rates and placements.
+                    <p className="text-gray-300 leading-relaxed">
+                      Advanced email validation ensures your messages reach client inboxes, not spam folders.
                     </p>
                   </div>
                 </div>
-              </div>
-              
-              <div className="p-8 border-b md:border-b-0 border-gray-200">
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-gray-800/50 border-gray-700 rounded-2xl hover:bg-gray-800/70 transition-all group backdrop-blur-sm">
+              <CardContent className="p-8">
                 <div className="flex items-start gap-4">
-                  <CheckCircle className="h-6 w-6 flex-shrink-0 mt-1" style={{ color: '#16a34a' }} />
-                  <div>
-                    <h3 className="text-lg font-bold mb-2" style={{ color: '#1e3a8a' }}>
-                      Stronger deliverability & reputation
-                    </h3>
-                    <p className="text-gray-600">
-                      Multi‑ESP routing and email validation keep your sender score healthy.
-                    </p>
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500/20 to-red-500/20 flex items-center justify-center flex-shrink-0 border border-orange-400/30">
+                    <CheckCircle className="h-6 w-6 text-orange-400" />
                   </div>
-                </div>
-              </div>
-              
-              <div className="p-8 md:border-r border-gray-200 md:col-span-2">
-                <div className="flex items-start gap-4 justify-center">
-                  <CheckCircle className="h-6 w-6 flex-shrink-0 mt-1" style={{ color: '#16a34a' }} />
-                  <div className="text-center md:text-left">
-                    <h3 className="text-lg font-bold mb-2" style={{ color: '#1e3a8a' }}>
+                  <div>
+                    <h3 className="text-lg font-bold text-white mb-3">
                       Seamless integrations
                     </h3>
-                    <p className="text-gray-600">
-                      Connect Ongage to your CRM, ATS or practice management software via API.
+                    <p className="text-gray-300 leading-relaxed">
+                      Connect Ongage to your CRM or practice management software via flexible API.
                     </p>
                   </div>
                 </div>
-              </div>
-            </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -562,8 +549,7 @@ const ProfessionalServicesLanding = () => {
             </Button>
             <Button 
               size="lg" 
-              variant="outline"
-              className="px-12 py-5 text-xl font-semibold border-2 border-gray-600 text-gray-300 hover:text-white hover:border-gray-400 rounded-xl"
+              className="px-12 py-5 text-xl font-semibold bg-white text-gray-900 hover:bg-gray-100 border-0 rounded-xl shadow-xl transition-all"
             >
               Get a demo
             </Button>
