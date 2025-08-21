@@ -50,19 +50,19 @@ const Hero = () => {
       </div>
       
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
-        <h1 className="text-5xl md:text-7xl font-bold text-hero-foreground mb-6 leading-tight">
+        <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold text-hero-foreground mb-6 leading-tight animate-fade-in">
           One Dashboard for Every Client —{" "}
           <span className="bg-gradient-to-r from-hero-foreground via-primary-glow to-hero-foreground bg-clip-text text-transparent">
             Multi‑Client Management
           </span>
         </h1>
         
-        <p className="text-xl md:text-2xl text-hero-foreground/80 mb-12 max-w-4xl mx-auto leading-relaxed">
+        <p className="text-lg md:text-xl text-hero-foreground/80 mb-12 max-w-4xl mx-auto leading-relaxed animate-fade-in [animation-delay:0.2s]">
           Stop juggling multiple platforms. Manage all your clients' email marketing from one dashboard 
           while keeping their data separate, secure, and compliant.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in [animation-delay:0.4s]">
           <Button variant="hero" size="lg" className="text-lg px-8 py-4 h-14 bg-primary text-primary-foreground hover:bg-primary/90 shadow-glow">
             Start Free Trial
             <ArrowRight className="ml-2 h-5 w-5" />
@@ -73,7 +73,7 @@ const Hero = () => {
           </Button>
         </div>
         
-        <div className="mt-16 text-hero-foreground/60 text-sm">
+        <div className="mt-16 text-hero-foreground/60 text-sm animate-fade-in [animation-delay:0.6s]">
           Start your 14-day free trial • No credit card required • Cancel anytime
         </div>
       </div>

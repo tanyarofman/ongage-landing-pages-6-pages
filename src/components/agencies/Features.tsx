@@ -100,7 +100,7 @@ const Features = () => {
       </div>
 
       <div className="max-w-6xl mx-auto px-6 relative">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl font-bold text-foreground mb-4">
             Why Agencies Choose Ongage
           </h2>
@@ -111,7 +111,7 @@ const Features = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div key={index} className="relative bg-card rounded-xl p-8 shadow-feature border border-border/50 hover:shadow-glow transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+            <div key={index} className={`relative bg-card rounded-xl p-8 shadow-feature border border-border/50 hover:shadow-glow transition-all duration-300 hover:-translate-y-1 overflow-hidden animate-fade-in`} style={{ animationDelay: `${index * 0.1}s` }}>
               <PatternBackground pattern={feature.pattern} />
               
               <div className="relative z-10">
@@ -132,7 +132,7 @@ const Features = () => {
         </div>
 
         {/* Visual Multi-Client Management Section */}
-        <div className="mt-24 relative">
+        <div className="mt-24 relative animate-fade-in" style={{ animationDelay: '0.8s' }}>
           <div className="bg-gradient-to-br from-primary/5 to-primary-glow/5 rounded-3xl p-12 relative overflow-hidden">
             {/* Background Visualization */}
             <div className="absolute inset-0 opacity-10">
@@ -166,7 +166,7 @@ const Features = () => {
               
               <div className="grid md:grid-cols-2 gap-12">
                 <div className="space-y-8">
-                  <div className="bg-white/50 dark:bg-black/20 rounded-xl p-6 backdrop-blur-sm">
+                  <div className="bg-white/50 dark:bg-black/20 rounded-xl p-6 backdrop-blur-sm animate-fade-in" style={{ animationDelay: '1s' }}>
                     <div className="flex items-center gap-3 mb-4">
                       <div className="p-2 bg-primary/20 rounded-lg">
                         <Database className="h-5 w-5 text-primary" />
@@ -179,7 +179,7 @@ const Features = () => {
                     </p>
                   </div>
                   
-                  <div className="bg-white/50 dark:bg-black/20 rounded-xl p-6 backdrop-blur-sm">
+                  <div className="bg-white/50 dark:bg-black/20 rounded-xl p-6 backdrop-blur-sm animate-fade-in" style={{ animationDelay: '1.2s' }}>
                     <div className="flex items-center gap-3 mb-4">
                       <div className="p-2 bg-primary/20 rounded-lg">
                         <BarChart3 className="h-5 w-5 text-primary" />
@@ -194,7 +194,7 @@ const Features = () => {
                 </div>
                 
                 <div className="space-y-8">
-                  <div className="bg-white/50 dark:bg-black/20 rounded-xl p-6 backdrop-blur-sm">
+                  <div className="bg-white/50 dark:bg-black/20 rounded-xl p-6 backdrop-blur-sm animate-fade-in" style={{ animationDelay: '1.4s' }}>
                     <div className="flex items-center gap-3 mb-4">
                       <div className="p-2 bg-primary/20 rounded-lg">
                         <Users className="h-5 w-5 text-primary" />
@@ -207,7 +207,7 @@ const Features = () => {
                     </p>
                   </div>
                   
-                  <div className="bg-white/50 dark:bg-black/20 rounded-xl p-6 backdrop-blur-sm">
+                  <div className="bg-white/50 dark:bg-black/20 rounded-xl p-6 backdrop-blur-sm animate-fade-in" style={{ animationDelay: '1.6s' }}>
                     <div className="flex items-center gap-3 mb-4">
                       <div className="p-2 bg-primary/20 rounded-lg">
                         <Globe className="h-5 w-5 text-primary" />
