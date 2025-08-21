@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, BookOpen, Users } from "lucide-react";
+import { ArrowRight, BookOpen, Users, Building2 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const MainLanding = () => {
@@ -27,6 +27,18 @@ const MainLanding = () => {
       ],
       link: "/educators", 
       gradient: "from-hero/20 to-primary/10"
+    },
+    {
+      icon: Building2,
+      title: "Agencies & Multi-Client Management",
+      description: "Manage multiple clients from one dashboard with separate reputations, role-based access, and centralized control.",
+      highlights: [
+        "Separate lists and domains for each client",
+        "Role-based permissions and access control",
+        "Centralized reporting across all accounts"
+      ],
+      link: "/agencies",
+      gradient: "from-primary-glow/20 to-hero/10"
     }
   ];
 
@@ -49,8 +61,8 @@ const MainLanding = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-hero-foreground/80 mb-16 max-w-4xl mx-auto leading-relaxed">
-            Whether you're publishing newsletters or teaching online courses, Ongage's AI-powered 
-            platform automates your email marketing so you can focus on what matters most.
+            Whether you're a publisher, educator, or agency, Ongage's AI-powered platform 
+            automates your email marketing so you can focus on what matters most.
           </p>
 
           <div className="text-lg text-hero-foreground/70 mb-12">
@@ -62,7 +74,7 @@ const MainLanding = () => {
       {/* Audience Selection */}
       <section className="py-24 relative z-10">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
             {audiences.map((audience, index) => (
               <Link key={index} to={audience.link} className="group">
                 <div className={`bg-gradient-to-br ${audience.gradient} backdrop-blur-sm border border-white/20 rounded-2xl p-8 h-full hover:shadow-glow transition-all duration-300 hover:-translate-y-1`}>
