@@ -19,10 +19,8 @@ const Hero = () => {
             </h2>
             
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              You create courses. We ensure students stay engaged from sign‑up through graduation. 
-              Ongage's AI‑powered email marketing platform lets educators and bootcamps build drip 
-              campaigns, deliver personalized reminders and collect feedback with minimal effort. 
-              Focus on teaching; we'll handle the rest.
+              Keep students engaged from enrollment to graduation with automated drip campaigns 
+              and personalized reminders. Focus on teaching—we handle the rest.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
