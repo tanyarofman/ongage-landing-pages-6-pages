@@ -18,10 +18,6 @@ const FAQ = () => {
     {
       question: "Will AI-generated emails sound like a robot?",
       answer: "Not at all. Ongage's Humanizer feature scans and adjusts the text so it reads naturally and matches your tone."
-    },
-    {
-      question: "How does pricing work?",
-      answer: "Ongage uses a transparent, token‑based pricing model. You pay only for what you use—no hidden fees."
     }
   ];
 

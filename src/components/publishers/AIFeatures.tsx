@@ -25,10 +25,10 @@ const AIFeatures = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-hero">
+    <section className="py-16 bg-gradient-hero">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-8">
+        <div className="text-center mb-12 animate-fade-in">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
             How the AI Email Editor Helps
           </h2>
           <p className="text-xl text-white/80 max-w-3xl mx-auto">
@@ -37,23 +37,23 @@ const AIFeatures = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-6 max-w-7xl mx-auto">
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="group bg-card/10 backdrop-blur-sm border border-white/10 rounded-3xl p-10 hover:bg-card/20 transition-all duration-500 hover:-translate-y-2 animate-fade-in"
+              className="group bg-card/10 backdrop-blur-sm border border-white/10 rounded-3xl p-8 hover:bg-card/20 transition-all duration-500 hover:-translate-y-2 animate-fade-in"
               style={{ animationDelay: `${0.2 + index * 0.1}s` }}
             >
               <div className="flex items-start gap-6">
-                <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center shadow-glow group-hover:shadow-xl transition-all duration-300">
-                  <feature.icon className="h-8 w-8 text-white" />
+                <div className="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center shadow-glow group-hover:shadow-xl transition-all duration-300">
+                  <feature.icon className="h-7 w-7 text-white" />
                 </div>
                 
                 <div className="flex-1">
-                  <h3 className="text-2xl font-semibold text-white mb-4">
+                  <h3 className="text-xl font-semibold text-white mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-white/70 leading-relaxed text-lg">
+                  <p className="text-white/70 leading-relaxed">
                     {feature.description}
                   </p>
                 </div>

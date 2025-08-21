@@ -21,7 +21,7 @@ const CTA = () => {
           <h2 className="text-4xl lg:text-6xl font-bold text-white mb-8 leading-tight">
             Ready to grow your newsletter 
             <br />
-            <span className="text-accent">without burnout?</span>
+            <span className="text-accent">without limits?</span>
           </h2>
           
           <p className="text-xl lg:text-2xl text-white/80 mb-16 max-w-4xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: '0.2s' }}>
@@ -29,10 +29,13 @@ const CTA = () => {
             how the AI Email Editor can transform your content workflow.
           </p>
           
-          <div className="animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in" style={{ animationDelay: '0.4s' }}>
             <Button variant="hero" size="lg" className="text-xl px-16 py-6 h-18 bg-primary hover:bg-primary/90 text-white shadow-glow hover:shadow-xl">
-              Book a Demo
+              Start Free Trial
               <ArrowRight className="ml-3 h-6 w-6" />
+            </Button>
+            <Button variant="outline" size="lg" className="text-xl px-12 py-4 h-14 border-2 border-white/20 text-white hover:bg-white/10">
+              Book a Demo
             </Button>
           </div>
           
