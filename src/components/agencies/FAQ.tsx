@@ -18,14 +18,10 @@ const FAQ = () => {
     {
       question: "Will unsubscribes in one list affect other lists?",
       answer: "No. Each list maintains its own suppression rules and bounce management. Contacts who unsubscribe from one brand remain active on other lists."
-    },
+    },  
     {
       question: "Do I need technical skills to integrate with CRMs and ESPs?",
       answer: "Not at all. Ongage offers a flexible API and plug‑and‑play integrations with popular CRMs and email delivery providers. Our interface is intuitive, and you can configure workflows, drip sequences and segmentation without writing code."
-    },
-    {
-      question: "Can I track performance across all clients?",
-      answer: "Yes. While each client's data remains separate, you can view consolidated reporting and performance metrics across all your accounts from a single dashboard."
     }
   ];
 
