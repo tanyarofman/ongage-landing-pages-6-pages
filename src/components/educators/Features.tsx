@@ -1,76 +1,65 @@
-import { BookOpen, Target, Settings, BarChart3 } from "lucide-react";
+import { BookOpen, Target, Users, Mail, Calendar, TrendingUp } from "lucide-react";
 
 const Features = () => {
   const features = [
     {
       icon: BookOpen,
-      title: "Student Engagement",
-      highlights: [
-        "Automated drip campaigns based on enrollment dates",
-        "Course milestone reminders and progress nudges",
-        "Welcome sequences for new students"
-      ]
+      title: "Easy course design",
+      description: "Complete control over your course structure and content delivery.",
+      details: "Build engaging courses with multimedia content, quizzes, and assignments. Customize the learning path to match your teaching style and student needs."
     },
     {
       icon: Target,
-      title: "Smart Segmentation",
-      highlights: [
-        "Group students by course type and cohort",
-        "Track progress stages automatically",
-        "Real-time segment updates as students advance"
-      ]
+      title: "Student engagement tools",
+      description: "Keep students motivated and on track throughout their learning journey.",
+      details: "Automated progress tracking, personalized reminders, and milestone celebrations to maintain high engagement and completion rates."
     },
     {
-      icon: Settings,
-      title: "Easy Setup",
-      highlights: [
-        "Drag-and-drop workflow builder - no coding required",
-        "Template library with course-specific designs",
-        "Simple CSV/Excel contact imports"
-      ]
+      icon: Users,
+      title: "Smart segmentation",
+      description: "Target the right message to the right student at the right time.",
+      details: "Segment students by progress, engagement level, or course type to deliver personalized communications that drive results."
     },
     {
-      icon: BarChart3,
-      title: "Course Analytics",
-      highlights: [
-        "Track engagement by cohort and module",
-        "AI-powered insights with natural language queries",
-        "Deliverability monitoring and optimization"
-      ]
+      icon: Mail,
+      title: "Automated workflows",
+      description: "Set up drip campaigns and triggered emails that run on autopilot.",
+      details: "Create sophisticated email workflows that respond to student behavior, course progress, and engagement patterns automatically."
+    },
+    {
+      icon: Calendar,
+      title: "Progress tracking",
+      description: "Monitor student advancement and identify those who need support.",
+      details: "Real-time dashboards show completion rates, engagement metrics, and early warning signs for students at risk of dropping out."
+    },
+    {
+      icon: TrendingUp,
+      title: "Powerful analytics",
+      description: "Understand what's working and optimize your courses for better outcomes.",
+      details: "Detailed insights into email performance, student behavior, and course effectiveness help you continuously improve results."
     }
   ];
 
   return (
-    <section className="py-24 bg-gradient-feature">
+    <section className="py-24 bg-background">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Built for{" "}
-            <span className="text-primary">Educators</span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Keep students engaged throughout their learning journey with automated, personalized communications
-          </p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
           {features.map((feature, index) => (
-            <div key={index} className="bg-gradient-card p-8 rounded-2xl shadow-feature hover:shadow-glow transition-all duration-300 border border-border/50">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-primary/10 rounded-xl mr-4">
-                  <feature.icon className="h-8 w-8 text-primary" />
+            <div key={index} className="group">
+              <div className="mb-6">
+                <div className="p-3 bg-muted rounded-xl inline-flex mb-4">
+                  <feature.icon className="h-8 w-8 text-foreground" />
                 </div>
-                <h3 className="text-2xl font-bold text-foreground">{feature.title}</h3>
+                <h3 className="text-2xl font-bold mb-3 text-foreground">
+                  {feature.title}
+                </h3>
+                <p className="text-muted-foreground mb-4 leading-relaxed">
+                  {feature.description}
+                </p>
+                <p className="text-sm text-muted-foreground/80 leading-relaxed">
+                  {feature.details}
+                </p>
               </div>
-              
-              <ul className="space-y-3">
-                {feature.highlights.map((highlight, idx) => (
-                  <li key={idx} className="flex items-start">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-foreground">{highlight}</span>
-                  </li>
-                ))}
-              </ul>
             </div>
           ))}
         </div>

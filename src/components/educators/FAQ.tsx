@@ -26,25 +26,25 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="py-24">
+    <section className="py-24 bg-muted/30">
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Common Questions
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+            Frequently asked questions
           </h2>
           <p className="text-xl text-muted-foreground">
-            Everything you need to know about getting started with Ongage for education
+            Everything you need to know about using Ongage for education
           </p>
         </div>
         
-        <Accordion type="single" collapsible className="space-y-4">
+        <Accordion type="single" collapsible className="space-y-1">
           {faqs.map((faq, index) => (
             <AccordionItem
               key={index}
               value={`item-${index}`}
-              className="bg-card border border-border rounded-xl px-6 shadow-soft hover:shadow-feature transition-all duration-300"
+              className="bg-background border-b border-border px-6"
             >
-              <AccordionTrigger className="text-left text-lg font-semibold py-6 hover:text-primary transition-colors">
+              <AccordionTrigger className="text-left text-lg font-medium py-6 hover:no-underline hover:text-foreground transition-colors">
                 {faq.question}
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground pb-6 text-base leading-relaxed">

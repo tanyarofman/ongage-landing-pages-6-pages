@@ -1,43 +1,55 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import educatorDashboard from "@/assets/educator-dashboard.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-hero/20 via-transparent to-primary-glow/10"></div>
-      <div className="absolute top-20 left-10 w-72 h-72 bg-primary-glow/20 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-hero/10 rounded-full blur-3xl"></div>
-      
-      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
-        <h1 className="text-5xl md:text-7xl font-bold text-hero-foreground mb-6 leading-tight">
-          Engage Students from Enrollment to Graduation —{" "}
-          <span className="bg-gradient-to-r from-hero-foreground via-primary-glow to-hero-foreground bg-clip-text text-transparent">
-            Automate Your Course Emails
-          </span>
-        </h1>
-        
-        <p className="text-xl md:text-2xl text-hero-foreground/80 mb-12 max-w-4xl mx-auto leading-relaxed">
-          You create courses. We ensure students stay engaged from sign‑up through graduation. 
-          Focus on teaching; we'll handle the automated drip campaigns and personalized reminders.
-        </p>
-        
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button variant="hero" size="lg" className="text-lg px-8 py-4 h-14 bg-primary text-primary-foreground hover:bg-primary/90 shadow-glow">
-            Start Free Trial
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
-          <Button variant="outline" size="lg" className="text-lg px-8 py-4 h-14 border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-            <Play className="mr-2 h-5 w-5" />
-            Book a Demo
-          </Button>
-        </div>
-        
-        <div className="mt-16 text-hero-foreground/60 text-sm">
-          Start your 14-day free trial • No credit card required • Cancel anytime
-        </div>
+    <div className="bg-background">
+      {/* Announcement Banner */}
+      <div className="bg-yellow-400 text-black text-center py-2 px-4">
+        <span className="text-sm font-medium">
+          Just launched: Advanced Student Analytics →
+        </span>
       </div>
-    </section>
+      
+      {/* Main Hero Section */}
+      <section className="relative py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-8 leading-tight max-w-4xl mx-auto">
+              Turn your students into 
+              <br />
+              <span className="text-foreground">success stories.</span>
+            </h1>
+            
+            <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
+              Ongage is a powerful platform for educators to create, manage, and grow successful 
+              online courses. It comes with modern tools to engage students, track progress, 
+              and automate communications throughout their learning journey.
+            </p>
+            
+            <Button 
+              size="lg" 
+              className="bg-foreground text-background hover:bg-foreground/90 text-lg px-8 py-4 h-14 font-medium"
+            >
+              Try Ongage completely free for 14 days
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </div>
+          
+          {/* Dashboard Preview */}
+          <div className="relative">
+            <div className="rounded-2xl overflow-hidden shadow-2xl border border-border">
+              <img 
+                src={educatorDashboard} 
+                alt="Ongage educator dashboard showing student progress and analytics"
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 
