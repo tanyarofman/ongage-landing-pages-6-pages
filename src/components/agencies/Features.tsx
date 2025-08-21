@@ -135,93 +135,123 @@ const Features = () => {
         <div className="mt-24 relative animate-fade-in" style={{ animationDelay: '0.8s' }}>
           <div className="bg-gradient-to-br from-primary/5 to-primary-glow/5 rounded-3xl p-12 relative overflow-hidden">
             <div className="relative z-10">
-              <h3 className="text-3xl font-bold text-foreground mb-12 text-center">
+              <h3 className="text-3xl font-bold text-foreground mb-16 text-center">
                 How Multi‑Client Management Works
               </h3>
               
-              {/* First Row: 2 items + 1 image */}
-              <div className="grid lg:grid-cols-3 gap-8 mb-12">
-                <div className="bg-white/50 dark:bg-black/20 rounded-xl p-6 backdrop-blur-sm animate-fade-in" style={{ animationDelay: '1s' }}>
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2 bg-primary/20 rounded-lg">
-                      <Database className="h-5 w-5 text-primary" />
+              {/* First Section: Lists & Segmentation */}
+              <div className="grid lg:grid-cols-2 gap-12 mb-16">
+                <div className="space-y-8">
+                  <div className="bg-white/50 dark:bg-black/20 rounded-xl p-6 backdrop-blur-sm animate-fade-in" style={{ animationDelay: '1s' }}>
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="p-2 bg-primary/20 rounded-lg">
+                        <Database className="h-5 w-5 text-primary" />
+                      </div>
+                      <h4 className="text-lg font-semibold text-foreground">Separate Lists & Databases</h4>
                     </div>
-                    <h4 className="text-lg font-semibold text-foreground">Separate Lists & Databases</h4>
+                    <p className="text-muted-foreground">
+                      Create dedicated databases for each client with their own sender domains, 
+                      IPs, and suppression rules. Unsubscribes from one brand don't affect others.
+                    </p>
                   </div>
-                  <p className="text-muted-foreground">
-                    Create dedicated databases for each client with their own sender domains, 
-                    IPs, and suppression rules. Unsubscribes from one brand don't affect others.
-                  </p>
-                </div>
-                
-                <div className="bg-white/50 dark:bg-black/20 rounded-xl p-6 backdrop-blur-sm animate-fade-in" style={{ animationDelay: '1.2s' }}>
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2 bg-primary/20 rounded-lg">
-                      <BarChart3 className="h-5 w-5 text-primary" />
+                  
+                  <div className="bg-white/50 dark:bg-black/20 rounded-xl p-6 backdrop-blur-sm animate-fade-in" style={{ animationDelay: '1.2s' }}>
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="p-2 bg-primary/20 rounded-lg">
+                        <BarChart3 className="h-5 w-5 text-primary" />
+                      </div>
+                      <h4 className="text-lg font-semibold text-foreground">Advanced Segmentation</h4>
                     </div>
-                    <h4 className="text-lg font-semibold text-foreground">Advanced Segmentation</h4>
+                    <p className="text-muted-foreground">
+                      Use up to 150 custom fields per list to capture every data point needed 
+                      for personalization and precise targeting.
+                    </p>
                   </div>
-                  <p className="text-muted-foreground">
-                    Use up to 150 custom fields per list to capture every data point needed 
-                    for personalization and precise targeting.
-                  </p>
                 </div>
 
-                {/* First Image */}
+                {/* Segmentation Image */}
                 <div className="bg-gradient-to-br from-primary/10 to-primary-glow/10 rounded-xl p-8 flex items-center justify-center animate-fade-in" style={{ animationDelay: '1.4s' }}>
                   <div className="text-center">
-                    <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Database className="h-8 w-8 text-primary" />
+                    <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Users className="h-10 w-10 text-primary" />
                     </div>
-                    <div className="space-y-2">
-                      <div className="h-2 bg-primary/30 rounded w-12 mx-auto"></div>
-                      <div className="h-2 bg-primary/20 rounded w-8 mx-auto"></div>
-                      <div className="h-2 bg-primary/20 rounded w-10 mx-auto"></div>
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-2 justify-center">
+                        <div className="w-3 h-3 bg-primary/40 rounded-full"></div>
+                        <div className="h-1 bg-primary/30 rounded w-16"></div>
+                      </div>
+                      <div className="flex items-center gap-2 justify-center">
+                        <div className="w-3 h-3 bg-primary-glow/40 rounded-full"></div>
+                        <div className="h-1 bg-primary-glow/30 rounded w-12"></div>
+                      </div>
+                      <div className="flex items-center gap-2 justify-center">
+                        <div className="w-3 h-3 bg-primary/40 rounded-full"></div>
+                        <div className="h-1 bg-primary/30 rounded w-20"></div>
+                      </div>
+                      <div className="flex items-center gap-2 justify-center">
+                        <div className="w-3 h-3 bg-primary-glow/40 rounded-full"></div>
+                        <div className="h-1 bg-primary-glow/30 rounded w-8"></div>
+                      </div>
                     </div>
+                    <div className="text-xs text-muted-foreground mt-4">Audience Segments</div>
                   </div>
                 </div>
               </div>
               
-              {/* Second Row: 2 items + 1 image */}
-              <div className="grid lg:grid-cols-3 gap-8">
-                <div className="bg-white/50 dark:bg-black/20 rounded-xl p-6 backdrop-blur-sm animate-fade-in" style={{ animationDelay: '1.6s' }}>
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2 bg-primary/20 rounded-lg">
-                      <Users className="h-5 w-5 text-primary" />
+              {/* Second Section: Permissions & Integrations */}
+              <div className="grid lg:grid-cols-2 gap-12">
+                <div className="space-y-8">
+                  <div className="bg-white/50 dark:bg-black/20 rounded-xl p-6 backdrop-blur-sm animate-fade-in" style={{ animationDelay: '1.6s' }}>
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="p-2 bg-primary/20 rounded-lg">
+                        <Users className="h-5 w-5 text-primary" />
+                      </div>
+                      <h4 className="text-lg font-semibold text-foreground">Team Permissions</h4>
                     </div>
-                    <h4 className="text-lg font-semibold text-foreground">Team Permissions</h4>
+                    <p className="text-muted-foreground">
+                      Define role‑based access ensuring account managers only see the brands 
+                      they're responsible for managing.
+                    </p>
                   </div>
-                  <p className="text-muted-foreground">
-                    Define role‑based access ensuring account managers only see the brands 
-                    they're responsible for managing.
-                  </p>
-                </div>
-                
-                <div className="bg-white/50 dark:bg-black/20 rounded-xl p-6 backdrop-blur-sm animate-fade-in" style={{ animationDelay: '1.8s' }}>
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2 bg-primary/20 rounded-lg">
-                      <Globe className="h-5 w-5 text-primary" />
+                  
+                  <div className="bg-white/50 dark:bg-black/20 rounded-xl p-6 backdrop-blur-sm animate-fade-in" style={{ animationDelay: '1.8s' }}>
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="p-2 bg-primary/20 rounded-lg">
+                        <Globe className="h-5 w-5 text-primary" />
+                      </div>
+                      <h4 className="text-lg font-semibold text-foreground">Flexible Integrations</h4>
                     </div>
-                    <h4 className="text-lg font-semibold text-foreground">Flexible Integrations</h4>
+                    <p className="text-muted-foreground">
+                      Connect to your CRM or data warehouse with our API, and choose the best 
+                      delivery provider per segment to improve deliverability.
+                    </p>
                   </div>
-                  <p className="text-muted-foreground">
-                    Connect to your CRM or data warehouse with our API, and choose the best 
-                    delivery provider per segment to improve deliverability.
-                  </p>
                 </div>
 
-                {/* Second Image */}
+                {/* Integrations Image */}
                 <div className="bg-gradient-to-br from-primary-glow/10 to-primary/10 rounded-xl p-8 flex items-center justify-center animate-fade-in" style={{ animationDelay: '2s' }}>
                   <div className="text-center">
-                    <div className="w-16 h-16 bg-primary-glow/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Users className="h-8 w-8 text-primary-glow" />
+                    <div className="w-20 h-20 bg-primary-glow/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Globe className="h-10 w-10 text-primary-glow" />
                     </div>
-                    <div className="flex gap-2 justify-center">
-                      <div className="w-3 h-8 bg-primary-glow/30 rounded"></div>
-                      <div className="w-3 h-6 bg-primary-glow/20 rounded"></div>
-                      <div className="w-3 h-10 bg-primary-glow/30 rounded"></div>
-                      <div className="w-3 h-4 bg-primary-glow/20 rounded"></div>
+                    <div className="space-y-3">
+                      <div className="flex justify-center gap-3">
+                        <div className="w-8 h-6 bg-primary-glow/30 rounded border border-primary-glow/20"></div>
+                        <div className="w-2 h-0.5 bg-primary-glow/40 mt-2.5"></div>
+                        <div className="w-6 h-6 bg-primary/30 rounded-full border border-primary/20"></div>
+                      </div>
+                      <div className="flex justify-center gap-3">
+                        <div className="w-6 h-6 bg-primary-glow/30 rounded-full border border-primary-glow/20"></div>
+                        <div className="w-2 h-0.5 bg-primary/40 mt-2.5"></div>
+                        <div className="w-8 h-6 bg-primary/30 rounded border border-primary/20"></div>
+                      </div>
+                      <div className="flex justify-center gap-3">
+                        <div className="w-6 h-8 bg-primary/30 rounded border border-primary/20"></div>
+                        <div className="w-2 h-0.5 bg-primary-glow/40 mt-3.5"></div>
+                        <div className="w-6 h-6 bg-primary-glow/30 rounded-full border border-primary-glow/20"></div>
+                      </div>
                     </div>
+                    <div className="text-xs text-muted-foreground mt-4">API Integrations</div>
                   </div>
                 </div>
               </div>
