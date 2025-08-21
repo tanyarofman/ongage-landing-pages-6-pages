@@ -1,14 +1,18 @@
-import Hero from "@/components/Hero";
-import Features from "@/components/Features";
-import Testimonial from "@/components/Testimonial";
-import FAQ from "@/components/FAQ";
-import CTA from "@/components/CTA";
+import Hero from "@/components/publishers/Hero";
+import Challenge from "@/components/publishers/Challenge";
+import AIFeatures from "@/components/publishers/AIFeatures";
+import Benefits from "@/components/publishers/Benefits";
+import Testimonial from "@/components/publishers/Testimonial";
+import FAQ from "@/components/publishers/FAQ";
+import CTA from "@/components/publishers/CTA";
 
 const PublishersLanding = () => {
   return (
     <main>
       <Hero />
-      <Features />
+      <Challenge />
+      <AIFeatures />
+      <Benefits />
       <Testimonial />
       <FAQ />
       <CTA />
