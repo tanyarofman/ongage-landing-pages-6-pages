@@ -1,5 +1,4 @@
 import { Bot, Palette, Users, FileText } from "lucide-react";
-import aiWorkflow from "@/assets/ai-workflow.jpg";
 
 const AIFeatures = () => {
   const features = [
@@ -26,50 +25,40 @@ const AIFeatures = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-dark-hero">
+    <section className="py-12 bg-gradient-dark-hero">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-12 animate-fade-in">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+        <div className="text-center mb-10 animate-fade-in">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4 hover-scale">
             How the AI Email Editor Helps
           </h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
+          <p className="text-lg text-white/80 max-w-3xl mx-auto">
             Transform your newsletter creation process with intelligent automation 
             that understands your brand and audience.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
-          <div className="space-y-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="space-y-6">
             {features.map((feature, index) => (
               <div 
                 key={index} 
-                className="relative group p-8 rounded-3xl bg-card/10 backdrop-blur-sm border border-white/10 hover:border-primary/30 transition-all duration-300 hover:shadow-glow"
+                className="relative group p-6 rounded-2xl bg-card/10 backdrop-blur-sm border border-white/10 hover:border-primary/30 transition-all duration-300 hover:shadow-glow animate-fade-in hover-scale"
                 style={{ animationDelay: `${0.1 * index}s` }}
               >
-                <div className="flex items-start gap-6">
-                  <div className="w-16 h-16 bg-primary/20 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary/30 transition-colors duration-300">
-                    <feature.icon className="h-8 w-8 text-primary" />
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary/30 transition-colors duration-300">
+                    <feature.icon className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
-                    <p className="text-white/80 leading-relaxed">{feature.description}</p>
+                    <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                    <p className="text-white/80 leading-relaxed text-sm">{feature.description}</p>
                   </div>
                 </div>
                 
                 {/* Background decoration */}
-                <div className="absolute top-6 right-6 w-16 h-16 bg-primary/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute top-4 right-4 w-12 h-12 bg-primary/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             ))}
-          </div>
-          
-          {/* AI Workflow Visualization */}
-          <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-hero/20 blur-3xl rounded-3xl"></div>
-            <img 
-              src={aiWorkflow} 
-              alt="AI Email Creation Workflow" 
-              className="relative rounded-2xl shadow-2xl border border-white/10 w-full h-full object-cover"
-            />
           </div>
         </div>
       </div>
