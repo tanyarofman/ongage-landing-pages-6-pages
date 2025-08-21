@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight, Play, Building2, Users, BarChart3 } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -8,6 +8,46 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-hero/20 via-transparent to-primary-glow/10"></div>
       <div className="absolute top-20 left-10 w-72 h-72 bg-primary-glow/20 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-hero/10 rounded-full blur-3xl"></div>
+      
+      {/* Floating Dashboard Visual */}
+      <div className="absolute top-24 right-20 hidden lg:block">
+        <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 shadow-lg">
+          <div className="flex items-center gap-2 mb-3">
+            <Building2 className="h-4 w-4 text-hero-foreground/70" />
+            <div className="h-2 bg-hero-foreground/30 rounded w-16"></div>
+          </div>
+          <div className="space-y-2">
+            <div className="h-1.5 bg-primary-glow/60 rounded w-20"></div>
+            <div className="h-1.5 bg-hero-foreground/40 rounded w-14"></div>
+            <div className="h-1.5 bg-hero-foreground/40 rounded w-18"></div>
+          </div>
+        </div>
+      </div>
+
+      {/* Client Cards Visual */}
+      <div className="absolute bottom-32 left-16 hidden lg:block">
+        <div className="space-y-3">
+          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-3 shadow-lg flex items-center gap-2">
+            <Users className="h-3 w-3 text-hero-foreground/70" />
+            <div className="h-1.5 bg-hero-foreground/30 rounded w-12"></div>
+            <BarChart3 className="h-3 w-3 text-primary-glow/70" />
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-3 shadow-lg flex items-center gap-2">
+            <Users className="h-3 w-3 text-hero-foreground/70" />
+            <div className="h-1.5 bg-hero-foreground/30 rounded w-10"></div>
+            <BarChart3 className="h-3 w-3 text-primary-glow/70" />
+          </div>
+        </div>
+      </div>
+
+      {/* Geometric Pattern */}
+      <div className="absolute top-1/4 left-1/4 opacity-10">
+        <div className="grid grid-cols-3 gap-2">
+          {[...Array(9)].map((_, i) => (
+            <div key={i} className={`w-3 h-3 rounded-full ${i % 3 === 0 ? 'bg-primary-glow' : 'bg-hero-foreground'}`}></div>
+          ))}
+        </div>
+      </div>
       
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
         <h1 className="text-5xl md:text-7xl font-bold text-hero-foreground mb-6 leading-tight">
