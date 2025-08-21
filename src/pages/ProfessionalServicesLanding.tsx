@@ -146,7 +146,7 @@ const ProfessionalServicesLanding = () => {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Features Section - 4 Cards inspired by uploaded image */}
       <section className="py-32" id="features">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20">
@@ -162,80 +162,80 @@ const ProfessionalServicesLanding = () => {
             </p>
           </div>
           
-          {/* 4 Feature Cards */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-            <Card className="bg-gray-800/50 border-gray-700 rounded-2xl hover:bg-gray-800/70 transition-all group backdrop-blur-sm">
+          {/* 4 Feature Cards matching uploaded image style */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            <Card className="bg-gray-800/80 border border-gray-700/50 rounded-3xl hover:bg-gray-800 transition-all group backdrop-blur-sm">
               <CardContent className="p-8">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-400/20 to-pink-400/20 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform border border-purple-400/30">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500/30 to-pink-500/30 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform border border-purple-400/50">
                   <Users className="h-8 w-8 text-purple-400" />
                 </div>
                 <div className="flex items-center gap-3 mb-4">
                   <h3 className="text-xl font-bold text-white">
                     Consultants & Coaches
                   </h3>
-                  <Badge className="bg-purple-500/20 text-purple-300 border-purple-400/30 text-xs">
+                  <Badge className="bg-gradient-to-r from-purple-500 to-pink-500 text-white border-0 text-xs px-3 py-1 rounded-full">
                     High Touch
                   </Badge>
                 </div>
-                <p className="text-gray-300 leading-relaxed">
-                  Nurture leads through webinars, ebooks, and follow-up sessions with automated sequences.
+                <p className="text-gray-300 leading-relaxed text-sm">
+                  You nurture leads through multiple touchpoints — webinars, ebooks, follow‑up sessions. Creating tailored nurture sequences manually is time‑consuming and easy to miss.
                 </p>
               </CardContent>
             </Card>
             
-            <Card className="bg-gray-800/50 border-gray-700 rounded-2xl hover:bg-gray-800/70 transition-all group backdrop-blur-sm">
+            <Card className="bg-gray-800/80 border border-gray-700/50 rounded-3xl hover:bg-gray-800 transition-all group backdrop-blur-sm">
               <CardContent className="p-8">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-400/20 to-cyan-400/20 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform border border-blue-400/30">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500/30 to-cyan-500/30 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform border border-blue-400/50">
                   <Shield className="h-8 w-8 text-blue-400" />
                 </div>
                 <div className="flex items-center gap-3 mb-4">
                   <h3 className="text-xl font-bold text-white">
-                    Law Firms
+                    Legal & Finance
                   </h3>
-                  <Badge className="bg-blue-500/20 text-blue-300 border-blue-400/30 text-xs">
+                  <Badge className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white border-0 text-xs px-3 py-1 rounded-full">
                     Professional
                   </Badge>
                 </div>
-                <p className="text-gray-300 leading-relaxed">
-                  Keep clients informed with timely updates and educational content that builds trust.
+                <p className="text-gray-300 leading-relaxed text-sm">
+                  Clients depend on you for timely updates about regulation changes and deadlines. Automated reminders keep you top‑of‑mind and build lasting trust.
                 </p>
               </CardContent>
             </Card>
             
-            <Card className="bg-gray-800/50 border-gray-700 rounded-2xl hover:bg-gray-800/70 transition-all group backdrop-blur-sm">
+            <Card className="bg-gray-800/80 border border-gray-700/50 rounded-3xl hover:bg-gray-800 transition-all group backdrop-blur-sm">
               <CardContent className="p-8">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-400/20 to-emerald-400/20 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform border border-green-400/30">
-                  <Mail className="h-8 w-8 text-green-400" />
-                </div>
-                <div className="flex items-center gap-3 mb-4">
-                  <h3 className="text-xl font-bold text-white">
-                    Financial Advisory
-                  </h3>
-                  <Badge className="bg-green-500/20 text-green-300 border-green-400/30 text-xs">
-                    Seasonal
-                  </Badge>
-                </div>
-                <p className="text-gray-300 leading-relaxed">
-                  Automated seasonal campaigns and deadline reminders for busy periods.
-                </p>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-gray-800/50 border-gray-700 rounded-2xl hover:bg-gray-800/70 transition-all group backdrop-blur-sm">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-400/20 to-red-400/20 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform border border-orange-400/30">
-                  <TrendingUp className="h-8 w-8 text-orange-400" />
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500/30 to-emerald-500/30 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform border border-green-400/50">
+                  <TrendingUp className="h-8 w-8 text-green-400" />
                 </div>
                 <div className="flex items-center gap-3 mb-4">
                   <h3 className="text-xl font-bold text-white">
                     Recruitment
                   </h3>
-                  <Badge className="bg-orange-500/20 text-orange-300 border-orange-400/30 text-xs">
+                  <Badge className="bg-gradient-to-r from-green-500 to-emerald-500 text-white border-0 text-xs px-3 py-1 rounded-full">
                     Multi-Party
                   </Badge>
                 </div>
-                <p className="text-gray-300 leading-relaxed">
-                  Engage candidates and employers with automated job alerts and interview prep.
+                <p className="text-gray-300 leading-relaxed text-sm">
+                  You must engage both candidates and employers. Automated job alerts and interview prep sequences increase placements and client satisfaction.
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-gray-800/80 border border-gray-700/50 rounded-3xl hover:bg-gray-800 transition-all group backdrop-blur-sm">
+              <CardContent className="p-8">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500/30 to-red-500/30 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform border border-orange-400/50">
+                  <Mail className="h-8 w-8 text-orange-400" />
+                </div>
+                <div className="flex items-center gap-3 mb-4">
+                  <h3 className="text-xl font-bold text-white">
+                    Financial Advisory
+                  </h3>
+                  <Badge className="bg-gradient-to-r from-orange-500 to-red-500 text-white border-0 text-xs px-3 py-1 rounded-full">
+                    Seasonal
+                  </Badge>
+                </div>
+                <p className="text-gray-300 leading-relaxed text-sm">
+                  Seasonal campaigns, deadline reminders, and client education require precise timing. Automated workflows ensure nothing falls through the cracks.
                 </p>
               </CardContent>
             </Card>
@@ -249,79 +249,94 @@ const ProfessionalServicesLanding = () => {
         </div>
       </section>
 
-      {/* How Ongage Helps - Beehiiv Style */}
+      {/* How Ongage Helps - Beehiiv Style with Stats Grid */}
       <section className="py-32 bg-gradient-to-b from-gray-900 to-gray-800">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-black text-white leading-tight">
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                CLEAR. TIMELY. EFFECTIVE
+                EXPLORE ONGAGE'S
               </span>
               <br />
-              PROFESSIONAL COMMUNICATION.
+              PROFESSIONAL FEATURES
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto mt-8 leading-relaxed">
-              From client updates to stakeholder reports, Ongage makes it simple to send professional, 
-              engaging emails that keep everyone in the loop and drive results.
-            </p>
+            <div className="flex justify-end mt-8">
+              <Button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white border-0 px-8 py-3 rounded-xl font-semibold">
+                Get Started Now →
+              </Button>
+            </div>
           </div>
           
-          {/* Stats Grid - Beehiiv Style */}
+          {/* Stats Grid inspired by second uploaded image */}
           <div className="grid md:grid-cols-4 gap-6 mb-20">
-            <Card className="bg-white/5 border-gray-700 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all group">
-              <CardContent className="p-8 text-center">
-                <div className="text-4xl md:text-5xl font-black mb-4">
-                  <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <Card className="bg-white/95 border-0 rounded-3xl p-8 text-center hover:shadow-xl transition-all">
+              <CardContent className="p-0">
+                <div className="text-6xl font-black mb-6">
+                  <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
                     95%+
                   </span>
                 </div>
-                <p className="text-gray-300 text-lg leading-relaxed">
-                  email deliverability rate. Professional communications that actually reach inboxes.
+                <p className="text-gray-800 text-lg leading-relaxed font-medium">
+                  email deliverability rate. Professional communications that reach inboxes, not spam folders.
                 </p>
               </CardContent>
             </Card>
             
-            <Card className="bg-white/5 border-gray-700 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all group">
-              <CardContent className="p-8 text-center">
-                <div className="text-4xl md:text-5xl font-black mb-4">
-                  <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    20+
-                  </span>
-                </div>
-                <p className="text-gray-300 text-lg leading-relaxed">
-                  hours saved weekly through automated workflows and smart segmentation.
-                </p>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-white/5 border-gray-700 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all group">
-              <CardContent className="p-8 text-center">
-                <div className="text-4xl md:text-5xl font-black mb-4">
-                  <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <Card className="bg-white/95 border-0 rounded-3xl p-8 text-center hover:shadow-xl transition-all">
+              <CardContent className="p-0">
+                <div className="text-6xl font-black mb-6">
+                  <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
                     150+
                   </span>
                 </div>
-                <p className="text-gray-300 text-lg leading-relaxed">
-                  custom fields for deep personalization and precise client targeting.
+                <p className="text-gray-800 text-lg leading-relaxed font-medium">
+                  custom fields for deep segmentation. Target clients with precision and personalization.
                 </p>
               </CardContent>
             </Card>
             
-            <Card className="bg-white/5 border-gray-700 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all group">
-              <CardContent className="p-8 text-center">
-                <div className="text-4xl md:text-5xl font-black mb-4">
-                  <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <Card className="bg-white/95 border-0 rounded-3xl p-8 text-center hover:shadow-xl transition-all">
+              <CardContent className="p-0">
+                <div className="text-6xl font-black mb-6">
+                  <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
+                    20+
+                  </span>
+                </div>
+                <p className="text-gray-800 text-lg leading-relaxed font-medium">
+                  hours saved weekly through automated workflows and smart campaign management.
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-white/95 border-0 rounded-3xl p-8 text-center hover:shadow-xl transition-all">
+              <CardContent className="p-0">
+                <div className="text-6xl font-black mb-6">
+                  <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
                     24/7
                   </span>
                 </div>
-                <p className="text-gray-300 text-lg leading-relaxed">
-                  automated nurturing ensures no lead or client ever falls through the cracks.
+                <p className="text-gray-800 text-lg leading-relaxed font-medium">
+                  automated nurturing ensures no client or prospect ever falls through the cracks.
                 </p>
               </CardContent>
             </Card>
           </div>
           
           {/* Feature Highlights */}
+          <div className="text-center mb-16">
+            <h3 className="text-4xl font-black text-white mb-8">
+              CLEAR. TIMELY. EFFECTIVE
+              <br />
+              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                COMMUNICATION.
+              </span>
+            </h3>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              From client updates to stakeholder reports, Ongage makes it simple to send professional, 
+              engaging emails that keep everyone in the loop and drive results.
+            </p>
+          </div>
+          
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="flex gap-6">
@@ -333,7 +348,7 @@ const ProfessionalServicesLanding = () => {
                     Visual workflow automation
                   </h3>
                   <p className="text-gray-300 text-lg leading-relaxed">
-                    Create drip campaigns and nurture sequences using our drag‑and‑drop builder. Trigger messages based on sign‑ups, downloads, or other events.
+                    Create drip campaigns and nurture sequences using our drag‑and‑drop builder. Trigger messages based on client actions and behaviors.
                   </p>
                 </div>
               </div>
@@ -347,7 +362,7 @@ const ProfessionalServicesLanding = () => {
                     Deep segmentation & personalization
                   </h3>
                   <p className="text-gray-300 text-lg leading-relaxed">
-                    Segment contacts by behavior, demographics or psychographics with up to 150 custom fields for hyper‑personalized messaging.
+                    Segment contacts by behavior, demographics, and preferences with up to 150 custom fields for hyper‑personalized messaging.
                   </p>
                 </div>
               </div>
@@ -363,7 +378,7 @@ const ProfessionalServicesLanding = () => {
                     Superior deliverability
                   </h3>
                   <p className="text-gray-300 text-lg leading-relaxed">
-                    Advanced email validation and smart sending ensure your professional communications reach the right inboxes at the right time.
+                    Advanced email validation and smart sending algorithms ensure your professional communications reach client inboxes reliably.
                   </p>
                 </div>
               </div>
@@ -377,7 +392,7 @@ const ProfessionalServicesLanding = () => {
                     Seamless integrations
                   </h3>
                   <p className="text-gray-300 text-lg leading-relaxed">
-                    Connect to your CRM, practice management software, or any system via our flexible API for seamless data sync.
+                    Connect to your CRM, practice management software, or any system via our flexible API for seamless data synchronization.
                   </p>
                 </div>
               </div>
@@ -386,7 +401,7 @@ const ProfessionalServicesLanding = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Benefits Section - Updated styling */}
       <section className="py-32" id="benefits">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20">
@@ -398,73 +413,73 @@ const ProfessionalServicesLanding = () => {
             </h2>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="bg-gray-800/50 border-gray-700 rounded-2xl hover:bg-gray-800/70 transition-all group backdrop-blur-sm">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Card className="bg-gray-800/80 border border-gray-700/50 rounded-3xl hover:bg-gray-800 transition-all group backdrop-blur-sm">
               <CardContent className="p-8">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center flex-shrink-0 border border-purple-400/30">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/30 to-pink-500/30 flex items-center justify-center flex-shrink-0 border border-purple-400/50">
                     <CheckCircle className="h-6 w-6 text-purple-400" />
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-white mb-3">
                       Lead & client nurturing on autopilot
                     </h3>
-                    <p className="text-gray-300 leading-relaxed">
-                      Build sequences that guide prospects through your funnel and keep clients engaged.
+                    <p className="text-gray-300 leading-relaxed text-sm">
+                      Build sequences that guide prospects through your funnel and keep clients engaged automatically.
                     </p>
                   </div>
                 </div>
               </CardContent>
             </Card>
             
-            <Card className="bg-gray-800/50 border-gray-700 rounded-2xl hover:bg-gray-800/70 transition-all group backdrop-blur-sm">
+            <Card className="bg-gray-800/80 border border-gray-700/50 rounded-3xl hover:bg-gray-800 transition-all group backdrop-blur-sm">
               <CardContent className="p-8">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500/20 to-emerald-500/20 flex items-center justify-center flex-shrink-0 border border-green-400/30">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500/30 to-emerald-500/30 flex items-center justify-center flex-shrink-0 border border-green-400/50">
                     <CheckCircle className="h-6 w-6 text-green-400" />
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-white mb-3">
                       Higher engagement rates
                     </h3>
-                    <p className="text-gray-300 leading-relaxed">
-                      Deliver timely, relevant communications that improve response rates and client satisfaction.
+                    <p className="text-gray-300 leading-relaxed text-sm">
+                      Deliver timely, relevant communications that improve response rates and strengthen client relationships.
                     </p>
                   </div>
                 </div>
               </CardContent>
             </Card>
             
-            <Card className="bg-gray-800/50 border-gray-700 rounded-2xl hover:bg-gray-800/70 transition-all group backdrop-blur-sm">
+            <Card className="bg-gray-800/80 border border-gray-700/50 rounded-3xl hover:bg-gray-800 transition-all group backdrop-blur-sm">
               <CardContent className="p-8">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 flex items-center justify-center flex-shrink-0 border border-blue-400/30">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/30 to-cyan-500/30 flex items-center justify-center flex-shrink-0 border border-blue-400/50">
                     <CheckCircle className="h-6 w-6 text-blue-400" />
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-white mb-3">
                       Superior deliverability
                     </h3>
-                    <p className="text-gray-300 leading-relaxed">
-                      Advanced email validation ensures your messages reach client inboxes, not spam folders.
+                    <p className="text-gray-300 leading-relaxed text-sm">
+                      Advanced email validation and reputation management ensure your messages reach client inboxes consistently.
                     </p>
                   </div>
                 </div>
               </CardContent>
             </Card>
             
-            <Card className="bg-gray-800/50 border-gray-700 rounded-2xl hover:bg-gray-800/70 transition-all group backdrop-blur-sm">
+            <Card className="bg-gray-800/80 border border-gray-700/50 rounded-3xl hover:bg-gray-800 transition-all group backdrop-blur-sm">
               <CardContent className="p-8">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500/20 to-red-500/20 flex items-center justify-center flex-shrink-0 border border-orange-400/30">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500/30 to-red-500/30 flex items-center justify-center flex-shrink-0 border border-orange-400/50">
                     <CheckCircle className="h-6 w-6 text-orange-400" />
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-white mb-3">
                       Seamless integrations
                     </h3>
-                    <p className="text-gray-300 leading-relaxed">
-                      Connect Ongage to your CRM or practice management software via flexible API.
+                    <p className="text-gray-300 leading-relaxed text-sm">
+                      Connect Ongage to your CRM or practice management software via our flexible API for seamless workflows.
                     </p>
                   </div>
                 </div>
