@@ -25,7 +25,7 @@ const AIFeatures = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-hero">
+    <section className="py-16 bg-gradient-dark-hero">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">

@@ -3,7 +3,7 @@ import { ArrowRight, Zap } from "lucide-react";
 
 const CTA = () => {
   return (
-    <section className="py-24 bg-gradient-hero relative overflow-hidden">
+    <section className="py-24 bg-gradient-dark-hero relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0">
         <div className="absolute top-10 left-10 w-64 h-64 bg-primary/30 rounded-full blur-3xl"></div>
