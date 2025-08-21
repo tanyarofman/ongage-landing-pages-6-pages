@@ -7,6 +7,7 @@ import MainLanding from "./pages/MainLanding";
 import PublishersLanding from "./pages/PublishersLanding";
 import EducatorsLanding from "./pages/EducatorsLanding";
 import AgenciesLanding from "./pages/AgenciesLanding";
+import Agencies2Landing from "./pages/Agencies2Landing";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/publishers" element={<PublishersLanding />} />
           <Route path="/educators" element={<EducatorsLanding />} />
           <Route path="/agencies" element={<AgenciesLanding />} />
+          <Route path="/agencies-2" element={<Agencies2Landing />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
