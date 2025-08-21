@@ -9,12 +9,13 @@ const EducatorsTheme = ({ children }: EducatorsThemeProps) => {
     <div 
       className="educators-theme"
       style={{
-        '--primary': '59 100% 50%',
-        '--primary-glow': '214 100% 70%',
-        '--hero': '59 100% 50%',
-        '--accent-foreground': '59 100% 50%',
-        '--ring': '59 100% 50%',
-        '--gradient-hero': 'linear-gradient(135deg, hsl(59 100% 50%), hsl(214 100% 70%))',
+        '--primary': '232 84% 60%',
+        '--primary-glow': '232 90% 70%',
+        '--hero': '232 84% 60%',
+        '--accent-foreground': '232 84% 60%',
+        '--ring': '232 84% 60%',
+        '--gradient-hero': 'linear-gradient(135deg, hsl(232 84% 60%), hsl(232 90% 70%))',
+        '--struggle-color': '20 91% 67%',
       } as React.CSSProperties}
     >
       {children}

@@ -1,6 +1,6 @@
 import Hero from "@/components/educators/Hero";
 import Features from "@/components/educators/Features";
-import FeatureHighlights from "@/components/educators/FeatureHighlights";
+import Testimonial from "@/components/educators/Testimonial";
 import FAQ from "@/components/educators/FAQ";
 import CTA from "@/components/educators/CTA";
 import EducatorsTheme from "@/components/educators/EducatorsTheme";
@@ -11,7 +11,7 @@ const EducatorsLanding = () => {
       <main>
         <Hero />
         <Features />
-        <FeatureHighlights />
+        <Testimonial />
         <FAQ />
         <CTA />
       </main>

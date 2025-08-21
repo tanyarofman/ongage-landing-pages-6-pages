@@ -26,33 +26,36 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="py-24 bg-muted/30">
+    <section className="py-16 bg-background">
       <div className="max-w-4xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            Frequently asked questions
+            Frequently Asked Questions
           </h2>
           <p className="text-xl text-muted-foreground">
-            Everything you need to know about using Ongage for education
+            Everything you need to know about automating your student communications
           </p>
         </div>
-        
-        <Accordion type="single" collapsible className="space-y-1">
-          {faqs.map((faq, index) => (
-            <AccordionItem
-              key={index}
-              value={`item-${index}`}
-              className="bg-background border-b border-border px-6"
-            >
-              <AccordionTrigger className="text-left text-lg font-medium py-6 hover:no-underline hover:text-foreground transition-colors">
-                {faq.question}
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground pb-6 text-base leading-relaxed">
-                {faq.answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+
+        <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <Accordion type="single" collapsible className="space-y-4">
+            {faqs.map((faq, index) => (
+              <AccordionItem 
+                key={index} 
+                value={`item-${index}`}
+                className="bg-card border border-border rounded-xl px-6 py-2 shadow-soft hover:shadow-feature transition-all duration-300 animate-fade-in"
+                style={{ animationDelay: `${0.3 + index * 0.1}s` }}
+              >
+                <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary transition-colors py-4 hover:no-underline">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed pb-4">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
       </div>
     </section>
   );
