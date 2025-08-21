@@ -34,6 +34,12 @@ const Main = () => {
       description: "Advanced agency features", 
       path: "/agencies-2",
       color: "from-red-500/20 to-red-600/20"
+    },
+    {
+      title: "Professional Services",
+      description: "Automated workflows for consultants", 
+      path: "/professional-services",
+      color: "from-indigo-500/20 to-indigo-600/20"
     }
   ];
 
@@ -53,7 +59,7 @@ const Main = () => {
 
       {/* Landing Page Cards */}
       <div className="max-w-5xl mx-auto px-6 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {landingPages.map((page, index) => (
             <Card 
               key={index}
