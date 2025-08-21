@@ -32,7 +32,7 @@ const BenefitsTable = () => {
   return (
     <section className="py-24 bg-background">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl font-bold text-foreground mb-4">
             Benefits at a Glance
           </h2>
@@ -41,7 +41,7 @@ const BenefitsTable = () => {
           </p>
         </div>
 
-        <div className="bg-card rounded-2xl overflow-hidden shadow-feature border border-border/50">
+        <div className="bg-card rounded-2xl overflow-hidden shadow-feature border border-border/50 animate-fade-in" style={{ animationDelay: '0.2s' }}>
           <div className="bg-primary/5 px-8 py-6 border-b border-border/50">
             <div className="grid grid-cols-2 gap-8">
               <h3 className="text-lg font-semibold text-foreground">What You Get</h3>
@@ -51,7 +51,7 @@ const BenefitsTable = () => {
           
           <div className="divide-y divide-border/50">
             {benefits.map((benefit, index) => (
-              <div key={index} className="px-8 py-6 hover:bg-muted/30 transition-colors">
+              <div key={index} className="px-8 py-6 hover:bg-muted/30 transition-colors animate-fade-in" style={{ animationDelay: `${0.1 * index}s` }}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
                   <div className="flex items-center gap-4">
                     <div className="p-2 bg-primary/10 rounded-lg flex-shrink-0">

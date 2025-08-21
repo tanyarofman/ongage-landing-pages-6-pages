@@ -28,7 +28,7 @@ const FAQ = () => {
   return (
     <section className="py-24 bg-muted/50">
       <div className="max-w-4xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl font-bold text-foreground mb-4">
             Frequently Asked Questions
           </h2>
@@ -37,7 +37,7 @@ const FAQ = () => {
           </p>
         </div>
 
-        <Accordion type="single" collapsible className="space-y-4">
+        <Accordion type="single" collapsible className="space-y-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
           {faqs.map((faq, index) => (
             <AccordionItem key={index} value={`item-${index}`} className="bg-card border border-border/50 rounded-lg px-6">
               <AccordionTrigger className="text-left font-semibold text-foreground">

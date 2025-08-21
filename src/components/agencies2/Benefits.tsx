@@ -1,30 +1,26 @@
-import { Shield, Users, Zap, BarChart3, CheckCircle, Sparkles, Target, Globe } from "lucide-react";
+import { Shield, Users, Zap, Target } from "lucide-react";
 
 const Benefits = () => {
   const benefits = [
     {
       icon: Shield,
       title: "Keep client data siloed and safe",
-      description: "Spin up multiple lists under one account and assign unique domains, reporting, and permissions. No more cross‑contamination or accidental mix‑ups.",
-      accent: "🔒"
+      description: "Spin up multiple lists under one account and assign unique domains, reporting, and permissions. No more cross‑contamination or accidental mix‑ups."
     },
     {
       icon: Users,
       title: "Assign roles with confidence",
-      description: "Role‑based access ensures each team member only sees the brands they manage.",
-      accent: "👥"
+      description: "Role‑based access ensures each team member only sees the brands they manage."
     },
     {
       icon: Zap,
       title: "Automate without coding",
-      description: "Use visual workflows to build drip campaigns, onboarding series and transactional triggers. Free up your team to focus on creative strategy.",
-      accent: "⚡"
+      description: "Use visual workflows to build drip campaigns, onboarding series and transactional triggers. Free up your team to focus on creative strategy."
     },
     {
       icon: Target,
       title: "Segment like a pro",
-      description: "Leverage up to 150 custom fields per list and advanced segmentation to send laser‑targeted messages.",
-      accent: "🎯"
+      description: "Leverage up to 150 custom fields per list and advanced segmentation to send laser‑targeted messages."
     }
   ];
 
@@ -41,7 +37,7 @@ const Benefits = () => {
       </div>
 
       <div className="max-w-6xl mx-auto px-6 relative">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl font-bold text-foreground mb-4">
             Why Ongage Is the Right Fit for Agencies
           </h2>
@@ -52,12 +48,7 @@ const Benefits = () => {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {benefits.map((benefit, index) => (
-            <div key={index} className="relative bg-card rounded-2xl p-8 shadow-feature border border-border/50 hover:shadow-glow transition-all duration-300 hover:-translate-y-2 group overflow-hidden">
-              {/* Casual floating accent */}
-              <div className="absolute top-4 right-4 text-2xl opacity-20 group-hover:opacity-40 transition-opacity">
-                {benefit.accent}
-              </div>
-              
+            <div key={index} className="relative bg-card rounded-2xl p-8 shadow-feature border border-border/50 hover:shadow-glow transition-all duration-300 hover:-translate-y-2 group overflow-hidden animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
               {/* Subtle pattern */}
               <div className="absolute bottom-0 right-0 w-24 h-24 opacity-5">
                 <div className="grid grid-cols-4 gap-1 p-2">
@@ -86,7 +77,7 @@ const Benefits = () => {
         </div>
 
         {/* Fun stats section */}
-        <div className="mt-20 bg-gradient-to-r from-primary/5 to-primary-glow/5 rounded-3xl p-12 text-center">
+        <div className="mt-20 bg-gradient-to-r from-primary/5 to-primary-glow/5 rounded-3xl p-12 text-center animate-fade-in" style={{ animationDelay: '0.6s' }}>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="space-y-2">
               <div className="text-3xl font-bold text-primary">150+</div>
