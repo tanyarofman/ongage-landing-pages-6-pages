@@ -7,31 +7,31 @@ const Main = () => {
   const landingPages = [
     {
       title: "Publishers",
-      description: "Email marketing solutions for content creators and newsletter publishers",
+      description: "For content creators & newsletters",
       path: "/publishers",
       color: "from-blue-500/20 to-blue-600/20"
     },
     {
       title: "Publishers AI",
-      description: "AI-powered email marketing tools for modern content creators",
+      description: "AI-powered email tools",
       path: "/publishers-ai", 
       color: "from-purple-500/20 to-purple-600/20"
     },
     {
       title: "Educators", 
-      description: "Automated email campaigns for online courses and educational content",
+      description: "Automated campaigns for courses",
       path: "/educators",
       color: "from-green-500/20 to-green-600/20"
     },
     {
       title: "Agencies",
-      description: "Multi-client email marketing management for digital agencies",
+      description: "Multi-client management",
       path: "/agencies",
       color: "from-orange-500/20 to-orange-600/20"
     },
     {
       title: "Agencies Pro",
-      description: "Advanced agency tools with enhanced client management features", 
+      description: "Advanced agency features", 
       path: "/agencies-2",
       color: "from-red-500/20 to-red-600/20"
     }
@@ -41,46 +41,44 @@ const Main = () => {
     <main className="min-h-screen bg-background">
       {/* Header */}
       <div className="bg-gradient-to-r from-primary/10 to-primary-glow/10 border-b border-border">
-        <div className="max-w-6xl mx-auto px-6 py-12 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4">
-            Ongage
+        <div className="max-w-6xl mx-auto px-6 py-8 text-center">
+          <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
+            Ongage Landing Pages
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-2">
-            Landing Pages
-          </p>
-          <p className="text-lg text-muted-foreground">
-            Email Marketing That Actually Works for Your Business
+          <p className="text-muted-foreground">
+            Email Marketing That Actually Works
           </p>
         </div>
       </div>
 
       {/* Landing Page Cards */}
-      <div className="max-w-6xl mx-auto px-6 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="max-w-5xl mx-auto px-6 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
           {landingPages.map((page, index) => (
             <Card 
               key={index}
               className="group hover:shadow-feature transition-all duration-300 hover:-translate-y-1 animate-fade-in border-border/50"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <CardContent className="p-8">
-                <div className={`w-full h-2 bg-gradient-to-r ${page.color} rounded-full mb-6`}></div>
+              <CardContent className="p-4">
+                <div className={`w-full h-1.5 bg-gradient-to-r ${page.color} rounded-full mb-3`}></div>
                 
-                <h2 className="text-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">
+                <h2 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                   {page.title}
                 </h2>
                 
-                <p className="text-muted-foreground mb-8 leading-relaxed">
+                <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
                   {page.description}
                 </p>
                 
                 <Link to={page.path}>
                   <Button 
                     variant="outline" 
+                    size="sm"
                     className="w-full group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-all duration-300"
                   >
-                    View Landing Page
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    View
+                    <ArrowRight className="ml-1 h-3 w-3 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
               </CardContent>
