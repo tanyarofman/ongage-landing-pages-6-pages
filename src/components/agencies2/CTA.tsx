@@ -6,12 +6,12 @@ const CTA = () => {
     <section className="py-24 bg-gradient-to-br from-primary/10 to-primary-glow/5">
       <div className="max-w-4xl mx-auto px-6 text-center">
         <h2 className="text-4xl font-bold text-foreground mb-6">
-          Ready to Streamline Your Agency's Email Marketing?
+          Ready to Scale Your Agency?
         </h2>
         
         <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto">
-          Are you ready to streamline your agency's email marketing and scale without limits? 
-          Transform your workflow and manage all clients from one powerful platform.
+          Transform your workflow and manage all clients from one powerful platform. 
+          Scale without limits while keeping everything organized and secure.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
