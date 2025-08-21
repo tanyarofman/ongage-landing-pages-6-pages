@@ -15,12 +15,12 @@ const CTA = () => {
           <span className="text-hero-foreground font-medium">Ready to transform your newsletter?</span>
         </div>
         
-        <h2 className="text-4xl md:text-6xl font-bold text-hero-foreground mb-6 leading-tight">
-          Ready to grow your newsletter and{" "}
+        <h2 className="text-4xl md:text-5xl font-bold text-hero-foreground mb-6 leading-tight">
+          Ready to{" "}
           <span className="bg-gradient-to-r from-hero-foreground via-primary-glow to-hero-foreground bg-clip-text text-transparent">
-            free up time
+            automate and scale
           </span>{" "}
-          for content creation?
+          your newsletter?
         </h2>
         
         <p className="text-xl text-hero-foreground/80 mb-12 max-w-3xl mx-auto leading-relaxed">
@@ -29,11 +29,11 @@ const CTA = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button variant="hero" size="lg" className="text-lg px-10 py-4 h-14 bg-hero-foreground text-hero hover:bg-hero-foreground/90">
+          <Button variant="hero" size="lg" className="text-lg px-10 py-4 h-14 bg-primary text-primary-foreground hover:bg-primary/90 shadow-glow">
             Start Free Trial
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
-          <Button variant="heroSecondary" size="lg" className="text-lg px-10 py-4 h-14">
+          <Button variant="outline" size="lg" className="text-lg px-10 py-4 h-14 border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground">
             Book a Demo
           </Button>
         </div>

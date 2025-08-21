@@ -19,19 +19,16 @@ const Hero = () => {
         </h1>
         
         <p className="text-xl md:text-2xl text-hero-foreground/80 mb-12 max-w-4xl mx-auto leading-relaxed">
-          Whether you run a growing Substack newsletter, a podcast mailing list, or a digital magazine, 
-          Ongage lets you focus on creating compelling stories while our platform handles the rest. 
-          Our email marketing platform combines AI‑assisted content creation, drag‑and‑drop automation 
-          workflows and best‑in‑class deliverability so you can build deeper relationships with your 
-          readers without hiring a tech team.
+          Focus on creating compelling stories while our AI-powered platform handles automation, 
+          personalization, and deliverability—no tech team required.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button variant="hero" size="lg" className="text-lg px-8 py-4 h-14">
+          <Button variant="hero" size="lg" className="text-lg px-8 py-4 h-14 bg-primary text-primary-foreground hover:bg-primary/90 shadow-glow">
             Start Free Trial
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
-          <Button variant="heroSecondary" size="lg" className="text-lg px-8 py-4 h-14">
+          <Button variant="outline" size="lg" className="text-lg px-8 py-4 h-14 border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground">
             <Play className="mr-2 h-5 w-5" />
             Book a Demo
           </Button>
