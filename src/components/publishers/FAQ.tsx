@@ -26,31 +26,31 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-background to-muted/20">
+    <section className="py-24 bg-gradient-feature">
       <div className="container mx-auto px-6">
-        <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl font-bold text-foreground mb-6">
-            Frequently Asked Questions
+        <div className="max-w-4xl mx-auto text-center mb-16 animate-fade-in">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-8">
+            Have Questions?
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-xl text-white/80">
             Everything you need to know about our AI Email Editor
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
-          <div className="bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-8 shadow-feature">
-            <Accordion type="single" collapsible className="space-y-4">
+        <div className="max-w-4xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <div className="bg-card/10 backdrop-blur-sm border border-white/10 rounded-3xl p-10 shadow-feature">
+            <Accordion type="single" collapsible className="space-y-6">
               {faqs.map((faq, index) => (
                 <AccordionItem 
                   key={index} 
                   value={`item-${index}`}
-                  className="border border-border/30 rounded-lg px-6 animate-fade-in"
+                  className="border border-white/10 rounded-2xl px-8 py-2 animate-fade-in"
                   style={{ animationDelay: `${0.3 + index * 0.1}s` }}
                 >
-                  <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary transition-colors">
+                  <AccordionTrigger className="text-left font-semibold text-white hover:text-accent transition-colors text-lg py-6">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground leading-relaxed pt-2">
+                  <AccordionContent className="text-white/70 leading-relaxed pt-2 pb-6 text-lg">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>

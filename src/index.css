@@ -6,48 +6,48 @@
 
 @layer base {
   :root {
-    --background: 250 100% 99%;
-    --foreground: 240 15% 9%;
+    --background: 240 15% 6%;
+    --foreground: 250 100% 99%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 240 15% 9%;
+    --card: 240 15% 8%;
+    --card-foreground: 250 100% 99%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 15% 9%;
+    --popover: 240 15% 8%;
+    --popover-foreground: 250 100% 99%;
 
     --primary: 258 75% 72%;
     --primary-foreground: 0 0% 100%;
     --primary-glow: 258 85% 80%;
 
-    --hero: 218 85% 17%;
+    --hero: 250 84% 54%;
     --hero-foreground: 0 0% 100%;
 
-    --secondary: 240 10% 96%;
-    --secondary-foreground: 240 15% 15%;
+    --secondary: 240 10% 12%;
+    --secondary-foreground: 250 100% 95%;
 
-    --muted: 240 5% 96%;
-    --muted-foreground: 240 5% 50%;
+    --muted: 240 10% 15%;
+    --muted-foreground: 240 5% 65%;
 
-    --accent: 260 100% 95%;
-    --accent-foreground: 258 75% 72%;
+    --accent: 45 93% 58%;
+    --accent-foreground: 240 15% 6%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 240 6% 90%;
-    --input: 240 6% 90%;
+    --border: 240 10% 18%;
+    --input: 240 10% 18%;
     --ring: 258 75% 72%;
 
     --radius: 0.75rem;
 
-    /* Custom Ongage Design Tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(218 85% 17%), hsl(218 85% 25%));
-    --gradient-feature: linear-gradient(180deg, hsl(0 0% 100%), hsl(240 20% 99%));
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(240 10% 98%));
+    /* Labguru-inspired Design Tokens */
+    --gradient-hero: linear-gradient(135deg, hsl(245 45% 15%), hsl(258 45% 20%));
+    --gradient-feature: linear-gradient(180deg, hsl(245 45% 15%), hsl(245 40% 18%));
+    --gradient-card: linear-gradient(145deg, hsl(240 15% 8%), hsl(245 20% 12%));
     
-    --shadow-soft: 0 4px 20px -4px hsl(258 75% 72% / 0.1);
-    --shadow-feature: 0 8px 30px -8px hsl(258 75% 72% / 0.15);
-    --shadow-glow: 0 0 40px hsl(258 75% 72% / 0.2);
+    --shadow-soft: 0 4px 20px -4px hsl(258 75% 72% / 0.3);
+    --shadow-feature: 0 8px 30px -8px hsl(258 75% 72% / 0.4);
+    --shadow-glow: 0 0 40px hsl(258 75% 72% / 0.3);
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);

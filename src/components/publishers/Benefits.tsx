@@ -25,43 +25,43 @@ const Benefits = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-primary/5 to-hero/5">
+    <section className="py-24 bg-gradient-feature">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl font-bold text-foreground mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-8">
             Why Creators Love Ongage
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-white/80 max-w-3xl mx-auto">
             Real benefits that transform how you create and send newsletters.
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto">
-          <div className="bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl overflow-hidden shadow-feature animate-fade-in" style={{ animationDelay: '0.2s' }}>
+        <div className="max-w-6xl mx-auto">
+          <div className="bg-card/10 backdrop-blur-sm border border-white/10 rounded-3xl overflow-hidden shadow-feature animate-fade-in" style={{ animationDelay: '0.2s' }}>
             {/* Header */}
-            <div className="bg-gradient-to-r from-primary/10 to-hero/10 px-8 py-6 border-b border-border/30">
+            <div className="bg-primary/20 px-10 py-8 border-b border-white/10">
               <div className="grid md:grid-cols-2 gap-4">
-                <div className="font-semibold text-lg text-foreground">Benefit</div>
-                <div className="font-semibold text-lg text-foreground">What it means</div>
+                <div className="font-bold text-2xl text-white">Benefit</div>
+                <div className="font-bold text-2xl text-white">What it means</div>
               </div>
             </div>
 
             {/* Benefits */}
-            <div className="divide-y divide-border/30">
+            <div className="divide-y divide-white/10">
               {benefits.map((item, index) => (
                 <div 
                   key={index}
-                  className="px-8 py-6 hover:bg-muted/20 transition-colors duration-200 animate-fade-in"
+                  className="px-10 py-8 hover:bg-card/10 transition-colors duration-200 animate-fade-in"
                   style={{ animationDelay: `${0.3 + index * 0.1}s` }}
                 >
-                  <div className="grid md:grid-cols-2 gap-6 items-start">
-                    <div className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span className="font-medium text-foreground">
+                  <div className="grid md:grid-cols-2 gap-8 items-start">
+                    <div className="flex items-start gap-4">
+                      <CheckCircle className="h-6 w-6 text-accent mt-0.5 flex-shrink-0" />
+                      <span className="font-semibold text-white text-lg">
                         {item.benefit}
                       </span>
                     </div>
-                    <div className="text-muted-foreground leading-relaxed">
+                    <div className="text-white/70 leading-relaxed text-lg">
                       {item.meaning}
                     </div>
                   </div>
