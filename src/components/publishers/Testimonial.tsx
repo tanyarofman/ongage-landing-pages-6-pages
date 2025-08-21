@@ -4,14 +4,6 @@ const Testimonial = () => {
   return (
     <section className="py-24 bg-gradient-dark-hero">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-8">
-            Real Results
-          </h2>
-          <p className="text-xl text-white/80">
-            See how creators are transforming their newsletter workflow
-          </p>
-        </div>
 
         <div className="max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
           <div className="relative bg-card/10 backdrop-blur-sm border border-white/10 rounded-3xl p-12 lg:p-16 shadow-feature">

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail, Zap } from "lucide-react";
+import aiDashboard from "@/assets/ai-dashboard.jpg";
 
 const Hero = () => {
   return (
@@ -35,32 +36,26 @@ const Hero = () => {
               Streamline newsletter operations, improve engagement, and reach your eureka moment faster with AI-powered email creation.
             </p>
 
-            <div className="pt-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="pt-8 flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in" style={{ animationDelay: '0.2s' }}>
               <Button variant="hero" size="lg" className="text-lg px-12 py-6 h-16 text-white bg-primary hover:bg-primary/90 shadow-glow">
-                Book a Demo
+                Start Free Trial
                 <ArrowRight className="ml-2 h-6 w-6" />
+              </Button>
+              <Button variant="outline" size="lg" className="text-lg px-12 py-4 h-14 border-2 border-white/20 text-white hover:bg-white/10">
+                Book a Demo
               </Button>
             </div>
           </div>
 
-          {/* Company logos section - Labguru style */}
+          {/* Dashboard preview */}
           <div className="mt-24 animate-fade-in" style={{ animationDelay: '0.4s' }}>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center opacity-60">
-              <div className="bg-white/10 rounded-lg p-6 h-16 flex items-center justify-center">
-                <Mail className="h-8 w-8 text-white/60" />
-              </div>
-              <div className="bg-white/10 rounded-lg p-6 h-16 flex items-center justify-center">
-                <Zap className="h-8 w-8 text-white/60" />
-              </div>
-              <div className="bg-white/10 rounded-lg p-6 h-16 flex items-center justify-center">
-                <Mail className="h-8 w-8 text-white/60" />
-              </div>
-              <div className="bg-white/10 rounded-lg p-6 h-16 flex items-center justify-center">
-                <Zap className="h-8 w-8 text-white/60" />
-              </div>
-              <div className="bg-white/10 rounded-lg p-6 h-16 flex items-center justify-center">
-                <Mail className="h-8 w-8 text-white/60" />
-              </div>
+            <div className="relative max-w-4xl mx-auto">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-hero/20 blur-3xl rounded-3xl"></div>
+              <img 
+                src={aiDashboard} 
+                alt="AI Newsletter Dashboard Interface" 
+                className="relative rounded-2xl shadow-2xl border border-white/10"
+              />
             </div>
           </div>
         </div>

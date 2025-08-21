@@ -13,10 +13,6 @@ const CTA = () => {
 
       <div className="relative container mx-auto px-6">
         <div className="max-w-5xl mx-auto text-center animate-fade-in">
-          <div className="inline-flex items-center gap-2 px-8 py-4 bg-primary/30 rounded-full text-primary font-medium mb-12 border border-primary/20">
-            <Zap className="h-5 w-5" />
-            Ready to Transform Your Newsletter?
-          </div>
 
           <h2 className="text-4xl lg:text-6xl font-bold text-white mb-8 leading-tight">
             Ready to grow your newsletter 
