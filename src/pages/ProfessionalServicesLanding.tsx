@@ -79,7 +79,7 @@ const ProfessionalServicesLanding = () => {
       <section className="py-32 relative">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <div className="mb-12">
-            <h1 className="text-6xl md:text-8xl font-black text-white mb-8 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-black text-white mb-8 leading-tight">
               THE ONE PLACE TO BUILD
               <br />
               <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-600 bg-clip-text text-transparent">
@@ -95,22 +95,6 @@ const ProfessionalServicesLanding = () => {
             </p>
           </div>
           
-          {/* Rating */}
-          <div className="flex items-center justify-center gap-2 mb-12">
-            <div className="flex">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-              ))}
-            </div>
-            <div className="flex items-center gap-2 text-gray-300">
-              <div className="flex -space-x-2">
-                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-purple-400 to-pink-400"></div>
-                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-cyan-400"></div>
-                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-green-400 to-emerald-400"></div>
-              </div>
-              <span className="text-sm">5/5 from <strong className="text-white">2,847</strong> customers</span>
-            </div>
-          </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
@@ -122,7 +106,7 @@ const ProfessionalServicesLanding = () => {
             <Button 
               size="lg" 
               variant="outline"
-              className="px-10 py-4 text-lg font-semibold border-2 border-gray-600 text-gray-300 hover:text-white hover:border-gray-400 rounded-lg"
+              className="px-10 py-4 text-lg font-semibold border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 rounded-lg backdrop-blur-sm"
             >
               View Plans
             </Button>
@@ -130,21 +114,6 @@ const ProfessionalServicesLanding = () => {
         </div>
       </section>
 
-      {/* Logo Marquee */}
-      <section className="py-16 border-b border-gray-800">
-        <div className="max-w-7xl mx-auto px-6">
-          <p className="text-center text-gray-400 text-sm font-medium mb-8 uppercase tracking-wider">
-            POWERING THE WORLD'S TOP PROFESSIONAL SERVICE PROVIDERS
-          </p>
-          <div className="flex items-center justify-center space-x-12 opacity-50">
-            <div className="text-2xl font-bold text-gray-500">KPMG</div>
-            <div className="text-2xl font-bold text-gray-500">McKinsey</div>
-            <div className="text-2xl font-bold text-gray-500">Deloitte</div>
-            <div className="text-2xl font-bold text-gray-500">BCG</div>
-            <div className="text-2xl font-bold text-gray-500">EY</div>
-          </div>
-        </div>
-      </section>
 
       {/* Features Section - 4 Cards inspired by uploaded image */}
       <section className="py-32" id="features">
@@ -267,77 +236,32 @@ const ProfessionalServicesLanding = () => {
             </div>
           </div>
           
-          {/* Stats Grid inspired by second uploaded image */}
-          <div className="grid md:grid-cols-4 gap-6 mb-20">
-            <Card className="bg-white/95 border-0 rounded-3xl p-8 text-center hover:shadow-xl transition-all">
-              <CardContent className="p-0">
-                <div className="text-6xl font-black mb-6">
-                  <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
-                    95%+
-                  </span>
-                </div>
-                <p className="text-gray-800 text-lg leading-relaxed font-medium">
-                  email deliverability rate. Professional communications that reach inboxes, not spam folders.
-                </p>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-white/95 border-0 rounded-3xl p-8 text-center hover:shadow-xl transition-all">
-              <CardContent className="p-0">
-                <div className="text-6xl font-black mb-6">
-                  <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
-                    150+
-                  </span>
-                </div>
-                <p className="text-gray-800 text-lg leading-relaxed font-medium">
-                  custom fields for deep segmentation. Target clients with precision and personalization.
-                </p>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-white/95 border-0 rounded-3xl p-8 text-center hover:shadow-xl transition-all">
-              <CardContent className="p-0">
-                <div className="text-6xl font-black mb-6">
-                  <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
-                    20+
-                  </span>
-                </div>
-                <p className="text-gray-800 text-lg leading-relaxed font-medium">
-                  hours saved weekly through automated workflows and smart campaign management.
-                </p>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-white/95 border-0 rounded-3xl p-8 text-center hover:shadow-xl transition-all">
-              <CardContent className="p-0">
-                <div className="text-6xl font-black mb-6">
-                  <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
-                    24/7
-                  </span>
-                </div>
-                <p className="text-gray-800 text-lg leading-relaxed font-medium">
-                  automated nurturing ensures no client or prospect ever falls through the cracks.
-                </p>
-              </CardContent>
-            </Card>
+          
+          {/* Feature Highlights with Illustration */}
+          <div className="grid md:grid-cols-2 gap-16 items-center mb-16">
+            <div className="text-center md:text-left">
+              <h3 className="text-4xl font-black text-white mb-8">
+                CLEAR. TIMELY. EFFECTIVE
+                <br />
+                <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  COMMUNICATION.
+                </span>
+              </h3>
+              <p className="text-xl text-gray-300 leading-relaxed">
+                From client updates to stakeholder reports, Ongage makes it simple to send professional, 
+                engaging emails that keep everyone in the loop and drive results.
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <img 
+                src="/src/assets/professional-communication.jpg" 
+                alt="Professional Communication Workflow" 
+                className="w-full max-w-lg rounded-2xl shadow-2xl" 
+              />
+            </div>
           </div>
           
-          {/* Feature Highlights */}
-          <div className="text-center mb-16">
-            <h3 className="text-4xl font-black text-white mb-8">
-              CLEAR. TIMELY. EFFECTIVE
-              <br />
-              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                COMMUNICATION.
-              </span>
-            </h3>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              From client updates to stakeholder reports, Ongage makes it simple to send professional, 
-              engaging emails that keep everyone in the loop and drive results.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-8">
               <div className="flex gap-6">
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center flex-shrink-0 border border-purple-400/30">
@@ -489,51 +413,54 @@ const ProfessionalServicesLanding = () => {
         </div>
       </section>
 
-      {/* FAQs */}
-      <section className="py-20 bg-white" id="faq">
+      {/* FAQs - Updated to match page design */}
+      <section className="py-32 bg-gray-800/50" id="faq">
         <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <Badge className="mb-4" variant="secondary">
-              Common Questions
-            </Badge>
-            <h2 className="text-4xl font-bold mb-6" style={{ color: '#1e3a8a' }}>
-              Frequently Asked Questions
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-8">
+              FREQUENTLY ASKED 
+              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                QUESTIONS
+              </span>
             </h2>
+            <p className="text-xl text-gray-300">
+              Get answers to common questions about professional email automation
+            </p>
           </div>
           
-          <Accordion type="single" collapsible className="space-y-4">
-            <AccordionItem value="item-1" className="border border-gray-200 rounded-lg px-6">
-              <AccordionTrigger className="text-left font-semibold" style={{ color: '#1e3a8a' }}>
+          <Accordion type="single" collapsible className="space-y-6">
+            <AccordionItem value="item-1" className="bg-gray-800/80 border border-gray-700/50 rounded-2xl px-8 py-2 backdrop-blur-sm">
+              <AccordionTrigger className="text-left font-bold text-white text-lg hover:no-underline">
                 Can I build different sequences for leads and existing clients?
               </AccordionTrigger>
-              <AccordionContent className="text-gray-600 leading-relaxed">
+              <AccordionContent className="text-gray-300 leading-relaxed text-lg pt-4">
                 Absolutely. Visual workflows let you design custom journeys for prospects, new clients, and long‑term customers, each triggered by specific actions or dates.
               </AccordionContent>
             </AccordionItem>
             
-            <AccordionItem value="item-2" className="border border-gray-200 rounded-lg px-6">
-              <AccordionTrigger className="text-left font-semibold" style={{ color: '#1e3a8a' }}>
+            <AccordionItem value="item-2" className="bg-gray-800/80 border border-gray-700/50 rounded-2xl px-8 py-2 backdrop-blur-sm">
+              <AccordionTrigger className="text-left font-bold text-white text-lg hover:no-underline">
                 Is Ongage suitable for small practices or solo consultants?
               </AccordionTrigger>
-              <AccordionContent className="text-gray-600 leading-relaxed">
+              <AccordionContent className="text-gray-300 leading-relaxed text-lg pt-4">
                 Yes. Our pricing scales with usage, so even small teams can access advanced automation and deliverability features without a large investment.
               </AccordionContent>
             </AccordionItem>
             
-            <AccordionItem value="item-3" className="border border-gray-200 rounded-lg px-6">
-              <AccordionTrigger className="text-left font-semibold" style={{ color: '#1e3a8a' }}>
+            <AccordionItem value="item-3" className="bg-gray-800/80 border border-gray-700/50 rounded-2xl px-8 py-2 backdrop-blur-sm">
+              <AccordionTrigger className="text-left font-bold text-white text-lg hover:no-underline">
                 How do I ensure regulatory updates reach the right clients?
               </AccordionTrigger>
-              <AccordionContent className="text-gray-600 leading-relaxed">
+              <AccordionContent className="text-gray-300 leading-relaxed text-lg pt-4">
                 Use segmentation to group clients by service line, region or industry. Combined with automation, this ensures each reminder or update goes only to the relevant recipients.
               </AccordionContent>
             </AccordionItem>
             
-            <AccordionItem value="item-4" className="border border-gray-200 rounded-lg px-6">
-              <AccordionTrigger className="text-left font-semibold" style={{ color: '#1e3a8a' }}>
+            <AccordionItem value="item-4" className="bg-gray-800/80 border border-gray-700/50 rounded-2xl px-8 py-2 backdrop-blur-sm">
+              <AccordionTrigger className="text-left font-bold text-white text-lg hover:no-underline">
                 Will my emails land in the inbox?
               </AccordionTrigger>
-              <AccordionContent className="text-gray-600 leading-relaxed">
+              <AccordionContent className="text-gray-300 leading-relaxed text-lg pt-4">
                 With integrated email validation and the option to choose from multiple delivery vendors, Ongage maximizes deliverability and protects your sender reputation.
               </AccordionContent>
             </AccordionItem>
@@ -564,7 +491,7 @@ const ProfessionalServicesLanding = () => {
             </Button>
             <Button 
               size="lg" 
-              className="px-12 py-5 text-xl font-semibold bg-white text-gray-900 hover:bg-gray-100 border-0 rounded-xl shadow-xl transition-all"
+              className="px-12 py-5 text-xl font-semibold bg-white text-gray-900 hover:bg-gray-100 border-0 rounded-xl shadow-2xl hover:shadow-white/20 transition-all"
             >
               Get a demo
             </Button>
